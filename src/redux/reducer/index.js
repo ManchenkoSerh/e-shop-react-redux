@@ -33,7 +33,6 @@ const initialState=
     };
 
 
-
 function data(state = initialState, action) {
 
             return state

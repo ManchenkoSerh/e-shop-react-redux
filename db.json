@@ -1,0 +1,32 @@
+{
+  "products": [
+
+    {
+      "id": 1,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": "1399$",
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 2,
+      "titleItem": "MacBook",
+      "model": "Air 13",
+      "price": "1399$",
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6570062.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 3,
+      "titleItem": "Iphone",
+      "model": "Air 13",
+      "price": "1399$",
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6510857.jpg",
+      "titleCategory": "phone"
+    }
+  ]
+}

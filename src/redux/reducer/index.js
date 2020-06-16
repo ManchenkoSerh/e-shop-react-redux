@@ -34,8 +34,8 @@ const initialState=
 
 
 function data(state = initialState, action) {
-
-            return state
-
+    switch (action.payload) {
+        default: return state
+    }
 }
 export default data;

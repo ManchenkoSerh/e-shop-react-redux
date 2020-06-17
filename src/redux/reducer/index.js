@@ -1,7 +1,8 @@
-import {FETCH_PRODUCTS_SUCCESS} from "../types/types";
+import {ADD_TO_SHOPPING_CART, FETCH_PRODUCTS_SUCCESS} from "../types/types";
 
 const initialState={
-    products:[]
+    products:[],
+    shoppingCart:[]
 }
     // {
     //     items: [
@@ -37,6 +38,7 @@ const initialState={
     // };
 
 
+
 function data(state = initialState, action) {
     switch (action.type) {
         case FETCH_PRODUCTS_SUCCESS:
@@ -44,6 +46,13 @@ function data(state = initialState, action) {
                 ...state,
                 products:action.payload
             }
+        case ADD_TO_SHOPPING_CART:
+            debugger
+            return{
+                ...state,
+                shoppingCart:action.payload
+            }
+
         default: return state
     }
 }

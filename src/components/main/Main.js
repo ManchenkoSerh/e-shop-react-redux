@@ -1,12 +1,12 @@
 import React from "react";
-import ListProducts from '../../container/list-products/ListProducts'
+import Routers from "../../helpers/routers/Routers";
 import Header from "../header/Header";
-import Router from "../../helpers/Routes";
+
 const Main = () => {
     return(
         <div>
-            <Header />
-            <Router />
+          <Header />
+          <Routers/>
         </div>
     );
 }

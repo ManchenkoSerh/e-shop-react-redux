@@ -1,17 +1,35 @@
 import React from "react";
-import SearchBar from "../search-bar/SearchBar";
-import styled from "styled-components";
-
-const Wrapper = styled.div`
-  background: #e95d2a;
-`;
+import {
+  Input,
+  Wrapper,
+  Container,
+  Catalog,
+  CatalogInner,
+  CatalogButton,
+  Categories,
+  Favorite,
+  Cart
+} from "./Header-style";
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div>
-      <Wrapper>
-        <SearchBar />
-      </Wrapper>
+      <Container>
+        <Wrapper>
+          <Catalog>
+            <CatalogButton>Catalog</CatalogButton>
+            <CatalogInner>
+              <Link to='/?category='><Categories>Link 1</Categories></Link>
+              <Categories>Link 2</Categories>
+              <Categories>Link 3</Categories>
+            </CatalogInner>
+          </Catalog>
+          <Input type="text" placeholder="I`m looking for ..." />
+          <Favorite>♥</Favorite>
+          <Cart>Cart</Cart>
+        </Wrapper>
+      </Container>
     </div>
   )
 }

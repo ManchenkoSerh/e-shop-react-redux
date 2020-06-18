@@ -17,7 +17,7 @@ return(
             {products.map(item=>{
                 const {id,...itemprops}=item;
                 return(
-                    <ProductsListItem item={item} onIncrease={()=>onIncrease(item)}/>
+                    <ProductsListItem item={item} onIncrease={()=>onIncrease(id)}/>
                 )
             })}
         </Container>

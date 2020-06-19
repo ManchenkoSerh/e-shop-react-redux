@@ -52,7 +52,7 @@ const Header = () => {
             value={inputState}
           />
           <Favorite>♥</Favorite>
-          <Cart>Cart</Cart>
+            <Link to="/shopping-cart"><Cart>Cart</Cart></Link>
         </Wrapper>
       </Container>
   )

@@ -7,7 +7,7 @@ const mapStateToProps=(state)=>({
     products:state.products
 })
 const mapDispatchToProps=(dispatch)=>({
-    fetchProducts:()=>dispatch(fetchProducts()),
-    onIncrease:(id)=>dispatch(addToShoppingCart(id)),
+        fetchProducts: () => dispatch(fetchProducts()),
+        onIncrease: (id) => {dispatch(addToShoppingCart(id))}
 })
 export default connect(mapStateToProps,mapDispatchToProps)(ProductsList)

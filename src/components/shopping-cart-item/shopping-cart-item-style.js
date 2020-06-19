@@ -17,6 +17,10 @@ export const ProductPrice = styled.div`
   margin: 20px 10px;
   float:left;
 `;
+export const ImgProduct=styled.img`
+width:100px;
+height:100px;
+`
 export const BtnIncrement = styled.button`
    width: 30px;
   height: 30px;

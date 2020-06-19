@@ -33,6 +33,124 @@
       "model": "Air 13",
       "price": 1399,
       "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/3/7/37331565751909.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 5,
+      "titleItem": "SONY",
+      "model": "WI-SP600N Black",
+      "price": 1399,
+      "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/6/1/61771542339513.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 6,
+      "titleItem": "MAKITA",
+      "model": "DUC302Z Вт",
+      "price": 1399,
+      "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/4/9/49631539049503.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 7,
+      "titleItem": "Холодильник",
+      "model": "HITACHI R-B410PUC6PWH Двухкамерный",
+      "price": 1399,
+      "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/8/6/86971555055780.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id":8,
+      "titleItem": "Sumsung",
+      "model": "SM-T395N Galaxy Tab Active 2 8.0",
+      "price": 1399,
+      "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/5/8/58241524016205.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 9,
+      "titleItem": "KINGSTON",
+      "model": "SO-DIMM DDR3-1600 2GB",
+      "price": 1399,
+      "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/9/0/90931573531559.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 10,
+      "titleItem": "PANASONIC",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "EA819N10 Arabica Latte",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/5/4/54031572259614.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 11,
+      "titleItem": "SONY",
+      "model": "50mm f/ 2.8 Macro",
+      "price": 1399,
+      "description": "",
+      "img": "https://m1.repka.com.ua/pub/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/7/5/75771514168206.jpg",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 12,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 13,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 14,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 15,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 16,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 17,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "titleCategory": "phone"
+    },{
+      "id": 18,
+      "titleItem": "Sumsung",
+      "model": "Air 13",
+      "price": 1399,
+      "description": "",
       "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
       "titleCategory": "phone"
     }

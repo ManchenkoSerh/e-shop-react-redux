@@ -1,12 +1,14 @@
 import {
     ADD_TO_SHOPPING_CART, DELETE_ALL_SHOPPING_CART,
-    FETCH_PRODUCTS_SUCCESS,
+    FETCH_PRODUCTS_SUCCESS, GET_PRODUCTS_INFO,
     SUB_TO_SHOPPING_CART,
 } from "../types/types";
 
 const initialState = {
+    shoppingCart: [],
   products: [],
-  shoppingCart: [],
+
+    productsInfo:[]
 };
 // {
 //     items: [
@@ -49,6 +51,12 @@ function data(state = initialState, action) {
         products: action.payload,
       };
 
+      case GET_PRODUCTS_INFO:
+          return{
+              ...state,
+              productsInfo:action.payload[0]
+
+          }
     case ADD_TO_SHOPPING_CART: {
       const productID = action.payload;
       const product = state.products.find((item) => item.id === productID);

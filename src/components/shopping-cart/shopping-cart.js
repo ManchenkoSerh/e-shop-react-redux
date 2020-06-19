@@ -9,16 +9,15 @@ const ShoppingCartTable = ({
   onIncrease,
   onDecrease,
   onDeleted /*onDecrease,onDelete*/,
-}) => {
-
+}) => {let sum=0;
     function totalSum(){
-        let sum=0;
+
         shoppingCart.map((item)=>{
-            debugger
             sum=sum+item.total;
-            return(<span>{sum}</span>)
         })
+        return <span>{sum}</span>
     }
+    //console.log(a)
   return (
     <div className="shopping-cart-table">
       <h2>Your Order</h2>
@@ -38,7 +37,7 @@ const ShoppingCartTable = ({
         })}
       </ul>
 
-      <div className="total">Total: {/*totalSum()**/}</div>
+      <div className="total">Total: {totalSum()}</div>
 
     </div>
   );

@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Img = styled.img`
   margin: 15px 25%;
+  height:180px;
+  width:180px;
 `;
 export const Button = styled.button`
   font-size: 1.2em;

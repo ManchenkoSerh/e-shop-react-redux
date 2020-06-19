@@ -2,35 +2,44 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import data from "../reducer/index";
 
+export const loadState=()=>{
+    try{
+        const serializedState=localStorage.getItem("state");
+        if(serializedState===null){
+            return undefined;
+        }
+        return JSON.parse(serializedState)
+    }catch (e) {
+        return undefined;
+    }
+}
+export const saveState=(state)=>{
+    try{
+        const serializeState=JSON.stringify(state);
+        localStorage.setItem("state",serializeState)
+    }catch (e) {
+
+    }
+}
+const persisted=loadState();
+
+
 const store = createStore(
     data,
+    persisted,
     compose(
         applyMiddleware(thunk),
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 );
-// store.subscribe(() => {
-//     const state = store.getState();
-//     const persist = {
-//         cart: state.cart,
-//     };
-//     window.localStorage.setItem('kovilook', JSON.stringify(persist));
-
+store.subscribe(()=>{
+    saveState({
+        shoppingCart:store.getState().shoppingCart,
+        products:store.getState().shoppingCart
+    })
+})
 export default store;
 
 
 
-// export default initialState => {
-//     initialState = JSON.parse(window.localStorage.getItem('kovilook')) || initialState;
-//     const middleware = [thunkMiddleware];
-//
-//     const store = createStore(reducers, initialState, compose(composeEnhancers(applyMiddleware(...middleware))));
-//     store.subscribe(() => {
-//         const state = store.getState();
-//         const persist = {
-//             cart: state.cart,
-//         };
-//         window.localStorage.setItem('kovilook', JSON.stringify(persist));
-//     });
-//     return store;
-// };
+

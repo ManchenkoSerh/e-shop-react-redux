@@ -11,7 +11,7 @@ const ProductsListItem = ({ item, onIncrease }) => {
       </h3>
       <span>{item.price}$</span>
       <br />
-        <Button onClick={onIncrease}>Купити</Button>
+      <Button onClick={onIncrease}>Купити</Button>
       <Link to={`/info?id=${item.id}`}>
         <ButtonInfo>Детальніше</ButtonInfo>
       </Link>

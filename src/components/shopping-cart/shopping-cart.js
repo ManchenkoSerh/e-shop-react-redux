@@ -9,15 +9,15 @@ const ShoppingCartTable = ({
   onIncrease,
   onDecrease,
   onDeleted /*onDecrease,onDelete*/,
-}) => {let sum=0;
-    function totalSum(){
-
-        shoppingCart.map((item)=>{
-            sum=sum+item.total;
-        })
-        return <span>{sum}</span>
-    }
-    //console.log(a)
+}) => {
+  let sum = 0;
+  function totalSum() {
+    shoppingCart.map((item) => {
+      sum = sum + item.total;
+    });
+    return <span>{sum}</span>;
+  }
+  //console.log(a)
   return (
     <div className="shopping-cart-table">
       <h2>Your Order</h2>
@@ -38,7 +38,6 @@ const ShoppingCartTable = ({
       </ul>
 
       <div className="total">Total: {totalSum()}</div>
-
     </div>
   );
 };

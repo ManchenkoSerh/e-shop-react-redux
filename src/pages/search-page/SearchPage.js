@@ -18,11 +18,15 @@ const SearchPage = ({ fetchProductsOnName, searchedProducts }) => {
     return null
   }
   console.log(searchedProducts)
-  return (
-    searchedProducts[0].hasOwnProperty('id') ?
-    <ul> {
-      searchedProducts.map( (item) => <li>{item.titleItem}</li>)
-    } </ul> : <div> no </div>
+  return searchedProducts[0].hasOwnProperty("id") ? (
+    <ul>
+      {" "}
+      {searchedProducts.map((item) => (
+        <li>{item.titleItem}</li>
+      ))}{" "}
+    </ul>
+  ) : (
+    <div> no </div>
   );
 };
 

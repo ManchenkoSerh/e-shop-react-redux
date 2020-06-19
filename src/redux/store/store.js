@@ -25,12 +25,12 @@ const persisted=loadState();
 
 
 const store = createStore(
-    data,
-    persisted,
-    compose(
-        applyMiddleware(thunk),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+  data,
+  persisted,
+  compose(
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 );
 store.subscribe(()=>{
     saveState({

@@ -2,9 +2,9 @@ import {
     ADD_TO_SHOPPING_CART,
     DELETE_ALL_SHOPPING_CART,
     FETCH_PRODUCTS_SUCCESS,
-    SUB_TO_SHOPPING_CART
+    SUB_TO_SHOPPING_CART,
+    FETCH_PRODUCTS_ON_NAME
 } from "../types/types";
-import {ADD_TO_SHOPPING_CART, FETCH_PRODUCTS_ON_NAME, FETCH_PRODUCTS_SUCCESS,} from "../types/types";
 
 export const fetchProductsSuccess=(data)=>({
     type:FETCH_PRODUCTS_SUCCESS,

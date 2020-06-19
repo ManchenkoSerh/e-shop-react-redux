@@ -1,13 +1,14 @@
 import React from "react";
-import ListProducts from '../../container/list-products/ListProducts'
+import Routers from "../../helpers/routers/Routers";
 import Header from "../header/Header";
-import Router from "../../helpers/Routes";
+import {MainContainer} from "./main-container-style";
+
 const Main = () => {
     return(
-        <div>
-            <Header />
-            <Router />
-        </div>
+        <MainContainer>
+          <Header />
+          <Routers/>
+        </MainContainer>
     );
 }
 export default Main;

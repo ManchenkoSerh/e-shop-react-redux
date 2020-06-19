@@ -3,7 +3,7 @@ import ProductsListItem from "../products-list-items/products-list-items";
 import {Container} from "./products-list-style";
 
 
-const ProductsList=({products=[],fetchProducts})=>{
+const ProductsList=({products=[],fetchProducts,onIncrease})=>{
     async function parseProducts(){
         await fetchProducts()
     }
@@ -17,7 +17,7 @@ return(
             {products.map(item=>{
                 const {id,...itemprops}=item;
                 return(
-                    <ProductsListItem item={item}/>
+                    <ProductsListItem item={item} onIncrease={()=>onIncrease(id)}/>
                 )
             })}
         </Container>

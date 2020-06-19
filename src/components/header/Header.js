@@ -27,7 +27,7 @@ const Header = () => {
           </Catalog>
           <Input type="text" placeholder="I`m looking for ..." />
           <Favorite>♥</Favorite>
-          <Cart>Cart</Cart>
+            <Link to="/shopping-cart"><Cart>Cart</Cart></Link>
         </Wrapper>
       </Container>
     </div>

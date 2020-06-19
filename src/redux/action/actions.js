@@ -1,4 +1,9 @@
-import {FETCH_PRODUCTS_SUCCESS} from "../types/types";
+import {
+    ADD_TO_SHOPPING_CART,
+    DELETE_ALL_SHOPPING_CART,
+    FETCH_PRODUCTS_SUCCESS,
+    SUB_TO_SHOPPING_CART
+} from "../types/types";
 
 export const fetchProductsSuccess=(data)=>({
     type:FETCH_PRODUCTS_SUCCESS,
@@ -10,3 +15,15 @@ export const fetchProducts=()=>(dispatch)=>{
         .then(res=>res.json())
         .then(res=>{dispatch(fetchProductsSuccess(res))})
 }
+export const addToShoppingCart=(id)=>({
+    type:ADD_TO_SHOPPING_CART,
+    payload:id
+})
+export const subToShoppingCart = (id) => ({
+  type: SUB_TO_SHOPPING_CART,
+  payload: id,
+});
+export const deleteAllShoppingCart = (id) => ({
+  type: DELETE_ALL_SHOPPING_CART,
+  payload: id,
+});

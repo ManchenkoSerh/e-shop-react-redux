@@ -1,6 +1,5 @@
 {
   "products": [
-
     {
       "id": 1,
       "titleItem": "Sumsung",
@@ -17,7 +16,7 @@
       "price": "1399$",
       "description": "",
       "img": "https://i1.foxtrot.com.ua/product/thumb/6570062.jpg",
-      "titleCategory": "phone"
+      "titleCategory": "laptop"
     },
     {
       "id": 3,

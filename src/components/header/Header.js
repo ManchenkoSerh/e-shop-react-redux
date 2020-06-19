@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Input,
   Wrapper,
@@ -10,27 +10,51 @@ import {
   Favorite,
   Cart
 } from "./Header-style";
-import { Link } from 'react-router-dom'
+import { Link, useHistory} from 'react-router-dom'
 
 const Header = () => {
+  const [inputState, setInputState] = useState('')
+
+  let history = useHistory();
+
+  function handleClick(word) {
+    setInputState('')
+    history.push(`/search?w=${word}`);
+  }
+
+  const inputOnChangeHandler = (e) => {
+    setInputState(e.target.value)
+  }
+
+  const inputOnKeyPressHandler = (e) => {
+    if(e.key==='Enter') {
+      handleClick(inputState)
+    }
+  }
+
   return (
-    <div>
       <Container>
         <Wrapper>
+          <CatalogButton><Link to='/'>MainPage</Link></CatalogButton>
           <Catalog>
             <CatalogButton>Catalog</CatalogButton>
             <CatalogInner>
-              <Link to='/?category='><Categories>Link 1</Categories></Link>
-              <Categories>Link 2</Categories>
-              <Categories>Link 3</Categories>
+              <Link to='/category?n='><Categories>Phones</Categories></Link>
+              <Link to='/category?n='><Categories>Laptops</Categories></Link>
+              <Link to='/category?n='><Categories>Link 3</Categories></Link>
             </CatalogInner>
           </Catalog>
-          <Input type="text" placeholder="I`m looking for ..." />
+          <Input
+            type="text"
+            placeholder="I`m looking for ..."
+            onChange={inputOnChangeHandler}
+            onKeyPress={inputOnKeyPressHandler}
+            value={inputState}
+          />
           <Favorite>♥</Favorite>
           <Cart>Cart</Cart>
         </Wrapper>
       </Container>
-    </div>
   )
 }
 

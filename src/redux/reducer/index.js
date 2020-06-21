@@ -4,13 +4,15 @@ import {
   FETCH_PRODUCTS_SUCCESS,
   GET_PRODUCTS_INFO,
   SUB_TO_SHOPPING_CART,
-  FETCH_PRODUCTS_ON_NAME,
+  FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
 } from "../types/types";
 
 const initialState = {
   shoppingCart: [],
   products: [],
   productsInfo: [],
+  videoUrl:[],
+  comments:[]
 };
 
 function data(state = initialState, action) {
@@ -26,6 +28,29 @@ function data(state = initialState, action) {
         ...state,
         productsInfo: action.payload[0],
       };
+    case FETCH_VIDEO_INFO_SUCCESS:
+      return{
+        ...state,
+        videoUrl:action.payload
+      }
+    case ADD_TO_COMMENTS:
+      return {
+        ...state,
+        comments:[
+            ...state.comments,
+          {
+            userId: action.payload.userId,
+            comments: action.payload.comments,
+            name: action.payload.name,
+          }
+        ]
+      }
+    case FETCH_COMMENTS_SUCCESS:
+      return {
+        ...state,
+        comments: action.payload
+
+      }
     case FETCH_PRODUCTS_ON_NAME:
       return {
         ...state,
@@ -52,6 +77,7 @@ function data(state = initialState, action) {
           id: product.id,
           name: product.titleItem,
           model: product.model,
+          urlVideoId:product.urlVideoId,
           total: product.price,
           price: product.price,
           count: 1,
@@ -87,6 +113,7 @@ function data(state = initialState, action) {
         id: product.id,
         name: product.titleItem,
         model: product.model,
+        urlVideoId:product.urlVideoId,
         price: product.price,
         total: item.total - product.price,
         count: item.count - 1,
@@ -122,6 +149,7 @@ function data(state = initialState, action) {
       const newItem = {
         id: product.id,
         name: product.titleItem,
+        urlVideoId:product.urlVideoId,
         model: product.model,
         price: product.price,
         total: item.total - item.count * product.price,

@@ -3,6 +3,7 @@ import { Button, ButtonInfo, Img, Item } from "./products-list-items-style";
 import { Link } from "react-router-dom";
 
 const ProductsListItem = ({ item, onIncrease }) => {
+
   return (
     <Item>
       <Img src={item.img} />
@@ -12,7 +13,7 @@ const ProductsListItem = ({ item, onIncrease }) => {
       <span>{item.price}$</span>
       <br />
       <Button onClick={onIncrease}>Купити</Button>
-      <Link to={`/info?id=${item.id}`}>
+      <Link to={`/info?id=${item.urlVideoId}`}>
         <ButtonInfo>Детальніше</ButtonInfo>
       </Link>
     </Item>

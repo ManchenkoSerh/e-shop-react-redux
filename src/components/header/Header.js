@@ -41,13 +41,13 @@ const Header = () => {
         <Catalog>
           <CatalogButton>Catalog</CatalogButton>
           <CatalogInner>
-            <Link to="/category?n=">
+            <Link to="/search?c=phone">
               <Categories>Phones</Categories>
             </Link>
-            <Link to="/category?n=">
+            <Link to="/search?c=laptop">
               <Categories>Laptops</Categories>
             </Link>
-            <Link to="/category?n=">
+            <Link to="/search?c=">
               <Categories>Link 3</Categories>
             </Link>
           </CatalogInner>

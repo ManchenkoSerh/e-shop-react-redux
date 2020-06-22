@@ -5,6 +5,7 @@ import {
   GET_PRODUCTS_INFO,
   SUB_TO_SHOPPING_CART,
   FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
+   FETCH_PRODUCTS_ON_CATEGORY,
 } from "../types/types";
 
 const initialState = {
@@ -56,6 +57,13 @@ function data(state = initialState, action) {
         ...state,
         searchedProducts: state.products.filter((item) =>
           item.titleItem.toLowerCase().includes(action.payload.toLowerCase())
+        ),
+      };
+    case FETCH_PRODUCTS_ON_CATEGORY:
+      return {
+        ...state,
+        searchedProducts: state.products.filter((item) =>
+          item.titleCategory.toLowerCase() === action.payload
         ),
       };
     case ADD_TO_SHOPPING_CART: {

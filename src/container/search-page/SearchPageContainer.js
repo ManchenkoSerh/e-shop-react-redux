@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import SearchPage from "../../pages/search-page/SearchPage";
-import { fetchProductsOnName } from "../../redux/action/actions";
+import SearchPage from "../../components/search-page/SearchPage";
+import {fetchProductsOnCategory, fetchProductsOnName} from "../../redux/action/actions";
 
 const mapStateToProps = (state) => ({
   searchedProducts: state.searchedProducts,
@@ -8,5 +8,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchProductsOnName: (searchLine) =>
     dispatch(fetchProductsOnName(searchLine)),
+  fetchProductsOnCategory: (searchLine) =>
+    dispatch(fetchProductsOnCategory(searchLine))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

@@ -4,7 +4,7 @@ import {
   FETCH_PRODUCTS_SUCCESS,
   GET_PRODUCTS_INFO,
   SUB_TO_SHOPPING_CART,
-  FETCH_PRODUCTS_ON_NAME,
+  FETCH_PRODUCTS_ON_NAME, FETCH_PRODUCTS_ON_CATEGORY,
 } from "../types/types";
 
 export const fetchProductsSuccess = (data) => ({
@@ -41,7 +41,7 @@ export const getProductInfo = (id) => (dispatch) => {
 };
 
 /**
- *  Action for get products on category
+ *  Action for get products on title
  */
 export const fetchProductsOnNameSuccess = (name) => ({
   type: FETCH_PRODUCTS_ON_NAME,
@@ -56,3 +56,18 @@ export const fetchProductsOnName = (searchLine) => (dispatch) => {
     })
     .then(() => dispatch(fetchProductsOnNameSuccess(searchLine)));
 };
+
+/**
+ * Action for get products on category
+ */
+export const fetchProductsOnCategorySuccess = (name) => ({
+  type: FETCH_PRODUCTS_ON_CATEGORY,
+  payload: name,
+});
+
+export const fetchProductsOnCategory = (searchLine) => (dispatch) => {
+  fetch('http://localhost:3001/products')
+    .then((res) => res.json())
+    .then((res) => {dispatch(fetchProductsSuccess(res))})
+    .then(() => dispatch(fetchProductsOnCategorySuccess(searchLine)))
+}

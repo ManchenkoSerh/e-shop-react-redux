@@ -25,7 +25,7 @@ const ProductsInfo = ({
   let query = useQuery();
   useEffect(() => {
     getProductInfo(query.get("id"));
-    fetchVideoInfo(query.get("id"));
+    //fetchVideoInfo(query.get("id"));
     fetchComments(query.get("id"));
   }, [query.get("id")]);
   console.log(comments);

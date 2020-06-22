@@ -35,7 +35,7 @@ export const getProductInfoSuccess = (data) => ({
   payload: data,
 });
 export const getProductInfo = (id) => (dispatch) => {
-  fetch(`http://localhost:3001/products?urlVideoId=${id}`)
+  fetch(`http://localhost:3001/products?id=${id}`)
     .then((res) => res.json())
     .then((res) => dispatch(getProductInfoSuccess(res)));
 };

@@ -4,12 +4,12 @@ import {fetchComments, fetchVideoInfo, getProductInfo} from "../../redux/action/
 
 const mapStateToProps = (state) => ({
   productsInfo: state.productsInfo,
-  videoUrl:state.videoUrl,
+  //videoUrl:state.videoUrl,
   comments:state.comments
 });
 const mapDispatchToProps = (dispatch) => ({
   getProductInfo: (id) => dispatch(getProductInfo(id)),
-  fetchVideoInfo:(id)=>dispatch(fetchVideoInfo(id)),
+ // fetchVideoInfo:(id)=>dispatch(fetchVideoInfo(id)),
   fetchComments:(id)=>dispatch(fetchComments(id))
 });
 

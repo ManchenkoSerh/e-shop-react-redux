@@ -15,10 +15,11 @@ export const Button = styled.button`
 `;
 
 export const Item = styled.div`
+  padding: 15px;
+  margin: 10px;
   border: 1px solid silver;
   border-radius: 5px;
-  width: 30%;
-  margin: 8px;
+  width: 22.2%;
 `;
 export const ButtonInfo = styled(Button)`
   border: 2px solid #0000ff;

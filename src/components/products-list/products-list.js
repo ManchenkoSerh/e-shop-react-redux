@@ -10,18 +10,16 @@ const ProductsList = ({ products = [], fetchProducts, onIncrease,deletedUrl }) =
     parseProducts();
     deletedUrl();
   }, []);
-  console.log(products);
+
   return (
-    <div>
-      <Container>
-        {products.map((item) => {
-          const { id, ...itemprops } = item;
-          return (
-            <ProductsListItem item={item} onIncrease={() => onIncrease(id)} />
-          );
-        })}
-      </Container>
-    </div>
+    <Container>
+      {products.map((item) => {
+        const { id, ...itemprops } = item;
+        return (
+          <ProductsListItem item={item} onIncrease={() => onIncrease(id)} />
+        );
+      })}
+    </Container>
   );
 };
 export default ProductsList;

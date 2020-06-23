@@ -14,7 +14,7 @@ const Characteristics=({productsInfo})=>{
             <h2>Характеристики</h2>
             <ListCharacteristics>
                 {productsInfo.imgPhotos != undefined
-                    ? productsInfo.charecterist.map((item) => {
+                    ? productsInfo.specifications.map((item) => {
                         return(
                             <CharacteristicItem>
                             <FeatureLeft>{item.key}</FeatureLeft>

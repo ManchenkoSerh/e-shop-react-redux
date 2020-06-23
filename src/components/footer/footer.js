@@ -1,36 +1,40 @@
 import React from "react";
-import { FooterContainer, GeneralInfo, SellerBlock } from "./footer-style";
+import {Container, FooterContainer, GeneralInfo, SellerBlock, Wrapper} from "./footer-style";
+import {useTranslation} from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
-    <FooterContainer>
-      <GeneralInfo>
-        <SellerBlock>
-          <h3>Покупцеві</h3>
-          <ul>
-            <li>Про товар</li>
-            <li>Про товар</li>
-            <li>Про товар</li>
-          </ul>
-        </SellerBlock>
-        <SellerBlock>
-          <h3>Продавцеві</h3>
-          <ul>
-            <li>Адреса</li>
-            <li>Повернення товара </li>
-            <li>Акції</li>
-          </ul>
-        </SellerBlock>
-        <SellerBlock>
-          <h3>Контакти</h3>
-          <ul>
-            <li>Режим роботи</li>
-            <li>Місцезнаходження</li>
-            <li>Про товар</li>
-          </ul>
-        </SellerBlock>
-      </GeneralInfo>
-    </FooterContainer>
+    <Container>
+      <Wrapper>
+        <GeneralInfo>
+          <SellerBlock>
+            <h3>{t('For Customer')}</h3>
+            <ul>
+              <li>{t('About product')}</li>
+              <li>{t('About product')}</li>
+              <li>{t('About product')}</li>
+            </ul>
+          </SellerBlock>
+          <SellerBlock>
+            <h3>{t('For Sellers')}</h3>
+            <ul>
+              <li>{t('Address')}</li>
+              <li>{t('Return product')} </li>
+              <li>{t('Sale')}</li>
+            </ul>
+          </SellerBlock>
+          <SellerBlock>
+            <h3>{t('Contacts')}</h3>
+            <ul>
+              <li>{t('Working hours')}</li>
+              <li>{t('Location')}</li>
+              <li>{t('About product')}</li>
+            </ul>
+          </SellerBlock>
+        </GeneralInfo>
+      </Wrapper>
+    </Container>
   );
 };
 export default Footer;

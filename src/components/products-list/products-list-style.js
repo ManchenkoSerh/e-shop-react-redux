@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.ul`
+export const Container = styled.div`
     display:flex;
     flex-wrap: wrap;
-    align-item:center;
+    padding: 20px;
 `

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import {
   BtnDecrement,
   BtnDelete,
@@ -13,6 +14,7 @@ import {
 } from "./shopping-cart-item-style";
 
 const ShoppingCartItem = ({ item, onIncrease, onDecrease, onDeleted }) => {
+  const { t } = useTranslation();
   // const {name,price,count}=items
   return (
     <TableItem>
@@ -29,7 +31,7 @@ const ShoppingCartItem = ({ item, onIncrease, onDecrease, onDeleted }) => {
         <BtnIncrement onClick={onIncrease}>+</BtnIncrement>
       </Quantity>
       <TotalSum>
-        Сума
+        {t('Sum')}
         <br />
         {item.total}$
       </TotalSum>

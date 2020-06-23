@@ -18,7 +18,7 @@ export const saveState=(state)=>{
         const serializeState=JSON.stringify(state);
         localStorage.setItem("state",serializeState)
     }catch (e) {
-
+        throw e;
     }
 }
 const persisted=loadState();

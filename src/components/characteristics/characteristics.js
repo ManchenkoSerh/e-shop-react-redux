@@ -6,7 +6,7 @@ const Characteristics=({productsInfo})=>{
             <h2>Характеристики</h2>
             <ul>
                 {productsInfo.imgPhotos != undefined
-                    ? productsInfo.charecterist.map((item) => {
+                    ? productsInfo.specifications.map((item) => {
                         return <li>{item.key + "..................." + item.value}</li>;
                     })
                     : null}

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Table, TD } from "./shopping-cart-style";
 import ShoppingCartItem from "../shopping-cart-item/shopping-cart-item";
+import {useTranslation} from "react-i18next";
 
 const ShoppingCartTable = ({
   shoppingCart = [],
@@ -17,10 +18,12 @@ const ShoppingCartTable = ({
     });
     return <span>{sum}</span>;
   }
+
+  const { t } = useTranslation();
   //console.log(a)
   return (
     <div className="shopping-cart-table">
-      <h2>Your Order</h2>
+      <h2>{t('Shopping Cart')}</h2>
       <ul>
         {shoppingCart.map((item) => {
           const { id, ...itemprop } = item;
@@ -37,7 +40,7 @@ const ShoppingCartTable = ({
         })}
       </ul>
 
-      <div className="total">Total: {totalSum()}</div>
+      <div className="total">{t('Subtotal')}: {totalSum()}</div>
     </div>
   );
 };

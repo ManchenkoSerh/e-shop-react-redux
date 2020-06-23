@@ -8,12 +8,14 @@ import {
   CatalogButton,
   Categories,
   Favorite,
-  Cart,
+  Cart, MainButton,
 } from "./Header-style";
 import { Link, useHistory } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const [inputState, setInputState] = useState("");
+  const { t, i18n } = useTranslation();
 
   let history = useHistory();
 
@@ -32,37 +34,43 @@ const Header = () => {
     }
   };
 
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <Container>
       <Wrapper>
-        <CatalogButton>
-          <Link to="/">MainPage</Link>
-        </CatalogButton>
+        <Link to='/'>
+          <img src='https://www.foxtrot.com.ua/dist/images/content/subscribe.png' width='64px' height='64px' />
+        </Link>
         <Catalog>
-          <CatalogButton>Catalog</CatalogButton>
+          <CatalogButton>{t('Catalog')}</CatalogButton>
           <CatalogInner>
             <Link to="/search?c=phone">
-              <Categories>Phones</Categories>
+              <Categories>{t('Phones')}</Categories>
             </Link>
             <Link to="/search?c=laptop">
-              <Categories>Laptops</Categories>
+              <Categories>{t('Laptops')}</Categories>
             </Link>
             <Link to="/search?c=">
-              <Categories>Link 3</Categories>
+              <Categories>{t('Other')}</Categories>
             </Link>
           </CatalogInner>
         </Catalog>
         <Input
           type="text"
-          placeholder="I`m looking for ..."
+          placeholder={t('I looking for')}
           onChange={inputOnChangeHandler}
           onKeyPress={inputOnKeyPressHandler}
           value={inputState}
         />
         <Favorite>♥</Favorite>
         <Link to="/shopping-cart">
-          <Cart>Cart</Cart>
+          <Cart>{t('Cart')}</Cart>
         </Link>
+        <button onClick={() => changeLanguage('en')}>en</button>
+        <button onClick={() => changeLanguage('ua')}>ua</button>
       </Wrapper>
     </Container>
   );

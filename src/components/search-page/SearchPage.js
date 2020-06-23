@@ -9,12 +9,14 @@ import {
   ItemStyle,
   Results
 } from "./SearchPageStyled";
+import {useTranslation} from "react-i18next";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
 const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCategory }) => {
+  const { t } = useTranslation();
   let query = useQuery();
   let assignment = query.get("w");
 
@@ -29,6 +31,7 @@ const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCate
   if (searchedProducts === undefined) {
     return null;
   }
+
   return searchedProducts.length > 0 ? (
     <Results>
 
@@ -37,16 +40,16 @@ const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCate
             <img src={item.img} width='128px' height='128px'/>
             <ItemInfo>
               <ItemInfoTitle>{`${item.titleItem} ${item.model}`}</ItemInfoTitle>
-              <ItemInfoPrice>{`${item.price} UAH`}</ItemInfoPrice>
-              <Button> Купити </Button>
-              <ButtonInfo> Подробніше </ButtonInfo>
+              <ItemInfoPrice>{`${item.price} $`}</ItemInfoPrice>
+              <Button> {t('Buy')} </Button>
+              <ButtonInfo> {t('Details')} </ButtonInfo>
             </ItemInfo>
           </ItemStyle>
         ))}
 
     </Results>
   ) : (
-    <AnyOneResults> No results </AnyOneResults>
+    <AnyOneResults> {t('No results')} </AnyOneResults>
   );
 };
 

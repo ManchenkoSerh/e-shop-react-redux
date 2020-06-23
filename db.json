@@ -2,9 +2,9 @@
   "products": [
     {
       "id": 1,
-      "titleItem": "Sumsung",
-      "model": "Air 13",
-      "price": 1399,
+      "titleItem": "Samsung",
+      "model": "S20",
+      "price": 1299,
       "description": "",
       "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
       "imgPhotos": [
@@ -12,7 +12,7 @@
         "https://i1.foxtrot.com.ua/product/SmallImages/6525224_2.jpg",
         "https://i1.foxtrot.com.ua/product/SmallImages/6525224_3.jpg"
       ],
-      "charecterist": [
+      "specifications": [
         {
           "key": "тип",
           "value": "смартфон"
@@ -49,7 +49,7 @@
         "https://i1.foxtrot.com.ua/product/SmallImages/6570047_1.jpg",
         "https://i1.foxtrot.com.ua/product/SmallImages/6570047_5.jpg"
       ],
-      "charecterist": [
+      "specifications": [
         {
           "key": "тип",
           "value": "смартфон"
@@ -72,7 +72,192 @@
         }
       ],
       "urlVideoId": "f-8cVqANmbI",
+      "titleCategory": "laptop"
+    },
+    {
+      "id": 3,
+      "titleItem": "Samsung",
+      "model": "S20",
+      "price": 1299,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "imgPhotos": [
+        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_1.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_2.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_3.jpg"
+      ],
+      "specifications": [
+        {
+          "key": "тип",
+          "value": "смартфон"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        }
+      ],
+      "urlVideoId": "Lz1TdMCPg0I",
       "titleCategory": "phone"
+    },
+    {
+      "id": 4,
+      "titleItem": "MacBook",
+      "model": "Air 13",
+      "price": 2000,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6570047.jpg",
+      "imgPhotos": [
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_0.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_1.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_5.jpg"
+      ],
+      "specifications": [
+        {
+          "key": "тип",
+          "value": "смартфон"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        }
+      ],
+      "urlVideoId": "f-8cVqANmbI",
+      "titleCategory": "laptop"
+    },
+    {
+      "id": 5,
+      "titleItem": "Samsung",
+      "model": "S20",
+      "price": 1299,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "imgPhotos": [
+        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_1.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_2.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_3.jpg"
+      ],
+      "specifications": [
+        {
+          "key": "тип",
+          "value": "смартфон"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        }
+      ],
+      "urlVideoId": "Lz1TdMCPg0I",
+      "titleCategory": "phone"
+    },
+    {
+      "id": 6,
+      "titleItem": "MacBook",
+      "model": "Air 13",
+      "price": 2000,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6570047.jpg",
+      "imgPhotos": [
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_0.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_1.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_5.jpg"
+      ],
+      "specifications": [
+        {
+          "key": "тип",
+          "value": "смартфон"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        }
+      ],
+      "urlVideoId": "f-8cVqANmbI",
+      "titleCategory": "laptop"
+    },
+    {
+      "id": 7,
+      "titleItem": "MacBook",
+      "model": "Air 13",
+      "price": 2000,
+      "description": "",
+      "img": "https://i1.foxtrot.com.ua/product/thumb/6570047.jpg",
+      "imgPhotos": [
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_0.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_1.jpg",
+        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_5.jpg"
+      ],
+      "specifications": [
+        {
+          "key": "тип",
+          "value": "смартфон"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        },
+        {
+          "key": "дісплей",
+          "value": "1024x1050"
+        },
+        {
+          "key": "процесор",
+          "value": "SnapDragon 656"
+        }
+      ],
+      "urlVideoId": "f-8cVqANmbI",
+      "titleCategory": "laptop"
     }
   ],
   "comments": [
@@ -129,6 +314,12 @@
       "name": "vb",
       "productId": "f-8cVqANmbI",
       "id": 10
+    },
+    {
+      "comments": "Text",
+      "name": "Name",
+      "productId": "Lz1TdMCPg0I",
+      "id": 11
     }
   ]
 }

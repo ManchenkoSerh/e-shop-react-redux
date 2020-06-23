@@ -9,18 +9,16 @@ const ProductsList = ({ products = [], fetchProducts, onIncrease }) => {
   useEffect(() => {
     parseProducts();
   }, []);
-  console.log(products);
+
   return (
-    <div>
-      <Container>
-        {products.map((item) => {
-          const { id, ...itemprops } = item;
-          return (
-            <ProductsListItem item={item} onIncrease={() => onIncrease(id)} />
-          );
-        })}
-      </Container>
-    </div>
+    <Container>
+      {products.map((item) => {
+        const { id, ...itemprops } = item;
+        return (
+          <ProductsListItem item={item} onIncrease={() => onIncrease(id)} />
+        );
+      })}
+    </Container>
   );
 };
 export default ProductsList;

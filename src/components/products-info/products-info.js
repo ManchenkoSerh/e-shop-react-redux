@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
-  Img,
-  ListImg,
-  ListItemImg,
-  ProductInfoContainer,
+    Button,
+    GeneralInfoToProduct,
+    Img, ImgInfoToProduct,
+    ListImg,
+    ListItemImg,
+    ProductInfoContainer, ProductPrice, VideoInfo,
 } from "./products-info-style";
 import VideoProduct from "./video-products";
 import Comments from "../../container/list-comments/Comments";
@@ -17,6 +19,11 @@ const ProductsInfo = ({
   videoUrl,
   fetchComments,
   comments = [],
+                          saveUrl,
+                          urlSave,
+                          shoppingCart,
+                          onIncrease,
+                          products,deletedUrl
 }) => {
   function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -24,35 +31,47 @@ const ProductsInfo = ({
 
   let query = useQuery();
   useEffect(() => {
+      //deletedUrl();
     getProductInfo(query.get("id"));
-    //fetchVideoInfo(query.get("id"));
     fetchComments(query.get("id"));
   }, [query.get("id")]);
-  console.log(comments);
-  const { id, ...itemprops } = productsInfo;
 
+const changePhoto=(img)=>{
+    saveUrl(img.currentTarget.src)
+}
   return (
     <ProductInfoContainer>
+        <GeneralInfoToProduct>
       <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
-      <Img src={productsInfo.img} />
+        <ProductPrice>{productsInfo.price}$</ProductPrice>
+        <Button onClick={()=>onIncrease(productsInfo.id)}>Додати в корзину</Button>
+        </GeneralInfoToProduct>
+        <ImgInfoToProduct>
       <ListImg>
         {productsInfo.imgPhotos != undefined
           ? productsInfo.imgPhotos.map((img) => {
               return (
                 <li>
-                  <ListItemImg src={img} />
+                  <ListItemImg onClick={changePhoto} src={img} />
                 </li>
               );
             })
           : null}
       </ListImg>
+            <Img src={(urlSave==undefined)?productsInfo.img:urlSave} />
+        </ImgInfoToProduct>
       <Characteristics productsInfo={productsInfo} />
+      <VideoInfo>
+        {/*<h2>Відеоогляд</h2>*/}
       <iframe
         src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
-        width="500px"
-        height="400px"
+        width="100%"
+        height="500px"
       />
-      <Comments comments={comments} />
+      </VideoInfo>
+
+        <Comments comments={comments} />
+
     </ProductInfoContainer>
   );
 };

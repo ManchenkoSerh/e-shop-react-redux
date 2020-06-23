@@ -1,11 +1,11 @@
 import {
-  ADD_TO_SHOPPING_CART,
-  DELETE_ALL_SHOPPING_CART,
-  FETCH_PRODUCTS_SUCCESS,
-  GET_PRODUCTS_INFO,
-  SUB_TO_SHOPPING_CART,
-  FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
-   FETCH_PRODUCTS_ON_CATEGORY,
+    ADD_TO_SHOPPING_CART,
+    DELETE_ALL_SHOPPING_CART,
+    FETCH_PRODUCTS_SUCCESS,
+    GET_PRODUCTS_INFO,
+    SUB_TO_SHOPPING_CART,
+    FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
+    FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL,
 } from "../types/types";
 
 const initialState = {
@@ -13,7 +13,9 @@ const initialState = {
   products: [],
   productsInfo: [],
   videoUrl:[],
-  comments:[]
+  comments:[],
+    urlSave:[]
+
 };
 
 function data(state = initialState, action) {
@@ -46,6 +48,16 @@ function data(state = initialState, action) {
           }
         ]
       }
+      case SAVE_URL:
+          return{
+              ...state,
+              urlSave:action.payload
+          }
+      case DELETE_URL:
+          return{
+              ...state,
+              urlSave:undefined
+          }
     case FETCH_COMMENTS_SUCCESS:
       return {
         ...state,

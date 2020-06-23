@@ -1,11 +1,11 @@
 import {
-  ADD_TO_SHOPPING_CART,
-  DELETE_ALL_SHOPPING_CART,
-  FETCH_PRODUCTS_SUCCESS,
-  GET_PRODUCTS_INFO,
-  SUB_TO_SHOPPING_CART,
-  FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, API_KEY, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
-  FETCH_PRODUCTS_ON_CATEGORY,
+    ADD_TO_SHOPPING_CART,
+    DELETE_ALL_SHOPPING_CART,
+    FETCH_PRODUCTS_SUCCESS,
+    GET_PRODUCTS_INFO,
+    SUB_TO_SHOPPING_CART,
+    FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, API_KEY, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
+    FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL,
 } from "../types/types";
 
 export const fetchProductsSuccess = (data) => ({
@@ -112,3 +112,11 @@ export const fetchProductsOnCategory = (searchLine) => (dispatch) => {
     .then((res) => {dispatch(fetchProductsSuccess(res))})
     .then(() => dispatch(fetchProductsOnCategorySuccess(searchLine)))
 }
+export const saveUrl=(url)=>({
+    type:SAVE_URL,
+    payload:url
+})
+export const deletedUrl=(url)=>({
+    type:DELETE_URL,
+    payload:url
+})

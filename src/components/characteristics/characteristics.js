@@ -1,17 +1,30 @@
 import React from "react";
+import {
+    Characteristic,
+    CharacteristicItem,
+    FeatureLeft, FeatureRight,
+    Key,
+    ListCharacteristics,
+    Value
+} from "./characteristics-style";
 
 const Characteristics=({productsInfo})=>{
     return(
-        <div>
+        <Characteristic>
             <h2>Характеристики</h2>
-            <ul>
+            <ListCharacteristics>
                 {productsInfo.imgPhotos != undefined
                     ? productsInfo.charecterist.map((item) => {
-                        return <li>{item.key + "..................." + item.value}</li>;
+                        return(
+                            <CharacteristicItem>
+                            <FeatureLeft>{item.key}</FeatureLeft>
+                                <FeatureRight>{item.value}</FeatureRight>
+                        </CharacteristicItem>
+                        );
                     })
                     : null}
-            </ul>
-        </div>
+            </ListCharacteristics>
+        </Characteristic>
     )
 }
 export default Characteristics;

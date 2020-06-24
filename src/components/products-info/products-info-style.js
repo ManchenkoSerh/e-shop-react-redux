@@ -43,3 +43,17 @@ font-size:1.5em
 export const  VideoInfo =styled.div`
 padding:40px auto;
 `
+export const ToTop=styled.button`
+ display: none;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color;
+  opacity:0.4;
+  color:white;
+`

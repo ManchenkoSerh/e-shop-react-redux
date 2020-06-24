@@ -4,6 +4,8 @@ import {addToShoppingCart, fetchProductsOnCategory, fetchProductsOnName} from ".
 
 const mapStateToProps = (state) => ({
   searchedProducts: state.searchedProducts,
+  isLoading:state.isLoading,
+  isError:state.isError
 });
 const mapDispatchToProps = (dispatch) => ({
   fetchProductsOnName: (searchLine) =>

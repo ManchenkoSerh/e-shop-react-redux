@@ -5,6 +5,8 @@ import {addToShoppingCart, deletedUrl, fetchProducts} from "../../redux/action/a
 
 const mapStateToProps = (state) => ({
   products: state.products,
+  isLoading:state.isLoading,
+  isError:state.isError
 });
 const mapDispatchToProps = (dispatch) => ({
   fetchProducts: () => dispatch(fetchProducts()),

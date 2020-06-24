@@ -5,19 +5,28 @@ import {
     GET_PRODUCTS_INFO,
     SUB_TO_SHOPPING_CART,
     FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, API_KEY, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
-    FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL,
+    FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL, FETCH_PRODUCTS_ERROR, FETCH_LOADING, FETCH_ERROR,
 } from "../types/types";
 
 export const fetchProductsSuccess = (data) => ({
   type: FETCH_PRODUCTS_SUCCESS,
   payload: data,
 });
+export const fetchError=(e)=>({
+    type: FETCH_ERROR,
+    payload: e,
+})
+export const fetchLoading=()=>({
+    type: FETCH_LOADING,
+})
 export const fetchProducts = () => (dispatch) => {
+    dispatch(fetchLoading())
   fetch("http://localhost:3001/products")
     .then((res) => res.json())
     .then((res) => {
       dispatch(fetchProductsSuccess(res));
-    });
+    })
+      .catch((res)=>dispatch(fetchError(res)));
 };
 export const addToShoppingCart = (id) => ({
   type: ADD_TO_SHOPPING_CART,
@@ -36,9 +45,11 @@ export const getProductInfoSuccess = (data) => ({
   payload: data,
 });
 export const getProductInfo = (id) => (dispatch) => {
+    dispatch(fetchLoading())
   fetch(`http://localhost:3001/products?id=${id}`)
     .then((res) => res.json())
-    .then((res) => dispatch(getProductInfoSuccess(res)));
+    .then((res) => dispatch(getProductInfoSuccess(res)))
+      .catch((res)=>dispatch(fetchError(res)));
 };
 export const fetchVideoInfoSuccess=(data)=>({
   type: FETCH_VIDEO_INFO_SUCCESS,
@@ -90,6 +101,7 @@ export const fetchProductsOnNameSuccess = (name) => ({
 });
 
 export const fetchProductsOnName = (searchLine) => (dispatch) => {
+    dispatch(fetchLoading())
   fetch("http://localhost:3001/products")
     .then((res) => res.json())
     .then((res) => {
@@ -107,6 +119,7 @@ export const fetchProductsOnCategorySuccess = (name) => ({
 });
 
 export const fetchProductsOnCategory = (searchLine) => (dispatch) => {
+    dispatch(fetchLoading())
   fetch('http://localhost:3001/products')
     .then((res) => res.json())
     .then((res) => {dispatch(fetchProductsSuccess(res))})

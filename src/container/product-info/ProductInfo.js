@@ -15,7 +15,9 @@ const mapStateToProps = (state) => ({
     products: state.products,
   comments:state.comments,
     shoppingCart: state.shoppingCart,
-  urlSave:state.urlSave
+  urlSave:state.urlSave,
+  isLoading:state.isLoading,
+  isError:state.isError
 });
 const mapDispatchToProps = (dispatch) => ({
   getProductInfo: (id) => dispatch(getProductInfo(id)),

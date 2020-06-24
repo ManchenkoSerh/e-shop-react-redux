@@ -10,12 +10,13 @@ import {
   Results
 } from "./SearchPageStyled";
 import {useTranslation} from "react-i18next";
+import Spinner from "../spinner/spinner";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCategory,onIncrease}) => {
+const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCategory,onIncrease,isLoading}) => {
   const { t } = useTranslation();
   let query = useQuery();
   let assignment = query.get("w");
@@ -30,6 +31,9 @@ const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCate
 
   if (searchedProducts === undefined) {
     return null;
+  }
+  if(isLoading){
+    return <Spinner/>
   }
   console.log(searchedProducts)
   return searchedProducts.length > 0 ? (

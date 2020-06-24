@@ -1,11 +1,11 @@
 import {
-    ADD_TO_SHOPPING_CART,
-    DELETE_ALL_SHOPPING_CART,
-    FETCH_PRODUCTS_SUCCESS,
-    GET_PRODUCTS_INFO,
-    SUB_TO_SHOPPING_CART,
-    FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
-    FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL,
+  ADD_TO_SHOPPING_CART,
+  DELETE_ALL_SHOPPING_CART,
+  FETCH_PRODUCTS_SUCCESS,
+  GET_PRODUCTS_INFO,
+  SUB_TO_SHOPPING_CART,
+  FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
+  FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL, FETCH_PRODUCTS_ERROR, FETCH_ERROR, FETCH_LOADING,
 } from "../types/types";
 
 const initialState = {
@@ -14,7 +14,9 @@ const initialState = {
   productsInfo: [],
   videoUrl:[],
   comments:[],
-    urlSave:[]
+    urlSave:[],
+  isError:null,
+  isLoading:null
 
 };
 
@@ -24,12 +26,24 @@ function data(state = initialState, action) {
       return {
         ...state,
         products: action.payload,
+        isLoading: false
       };
+    case FETCH_ERROR:
+      return{
+        ...state,
+        isError:true
+      }
+    case FETCH_LOADING:
+      return {
+        ...state,
+        isLoading: true
+      }
 
     case GET_PRODUCTS_INFO:
       return {
         ...state,
         productsInfo: action.payload[0],
+        isLoading: false
       };
     case FETCH_VIDEO_INFO_SUCCESS:
       return{
@@ -67,6 +81,7 @@ function data(state = initialState, action) {
     case FETCH_PRODUCTS_ON_NAME:
       return {
         ...state,
+        isLoading: false,
         searchedProducts: state.products.filter((item) =>
           item.titleItem.toLowerCase().includes(action.payload.toLowerCase())
         ),
@@ -74,6 +89,7 @@ function data(state = initialState, action) {
     case FETCH_PRODUCTS_ON_CATEGORY:
       return {
         ...state,
+        isLoading: false,
         searchedProducts: state.products.filter((item) =>
           item.titleCategory.toLowerCase() === action.payload
         ),

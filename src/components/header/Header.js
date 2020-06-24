@@ -53,7 +53,7 @@ const Header = () => {
             <Link to="/search?c=laptop">
               <Categories>{t('Laptops')}</Categories>
             </Link>
-            <Link to="/search?c=">
+            <Link to="/search?c=TV">
               <Categories>{t('Other')}</Categories>
             </Link>
           </CatalogInner>

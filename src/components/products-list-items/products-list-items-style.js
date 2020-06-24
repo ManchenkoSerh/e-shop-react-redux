@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Img = styled.img`
-  margin: 15px 25%;
+  margin: 15px auto;
   height:180px;
   width:180px;
 `;
@@ -16,7 +16,7 @@ export const Button = styled.button`
 
 export const Item = styled.div`
   padding: 15px;
-  margin: 10px;
+  margin: 5px;
   border: 1px solid silver;
   border-radius: 5px;
   width: 22.2%;

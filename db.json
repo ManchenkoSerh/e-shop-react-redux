@@ -6,11 +6,11 @@
       "model": "S20",
       "price": 1299,
       "description": "",
-      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "img": "https://i1.foxtrot.com.ua/product/MediumImages/6423073_0.jpg",
       "imgPhotos": [
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_1.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_2.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_3.jpg"
+        "https://i1.foxtrot.com.ua/product/MediumImages/6423073_0.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6423073_1.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6423073_4.jpg"
       ],
       "specifications": [
         {
@@ -34,7 +34,7 @@
           "value": "SnapDragon 656"
         }
       ],
-      "urlVideoId": "Lz1TdMCPg0I",
+      "urlVideoId": "BAQ6tkiQheo",
       "titleCategory": "phone"
     },
     {
@@ -43,11 +43,11 @@
       "model": "Air 13",
       "price": 2000,
       "description": "",
-      "img": "https://i1.foxtrot.com.ua/product/thumb/6570047.jpg",
+      "img": "https://i1.foxtrot.com.ua/product/MediumImages/6570062_0.jpg",
       "imgPhotos": [
-        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_0.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_1.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_5.jpg"
+        "https://i1.foxtrot.com.ua/product/MediumImages/6570062_1.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6570062_3.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6570062_4.jpg"
       ],
       "specifications": [
         {
@@ -80,11 +80,11 @@
       "model": "S20",
       "price": 1299,
       "description": "",
-      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "img": "https://i1.foxtrot.com.ua/product/MediumImages/6557837_1.jpg",
       "imgPhotos": [
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_1.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_2.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_3.jpg"
+        "https://i1.foxtrot.com.ua/product/MediumImages/6557837_1.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6557837_2.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6557837_0.jpg"
       ],
       "specifications": [
         {
@@ -108,20 +108,20 @@
           "value": "SnapDragon 656"
         }
       ],
-      "urlVideoId": "Lz1TdMCPg0I",
+      "urlVideoId": "Xa7FQ72lp9w",
       "titleCategory": "phone"
     },
     {
       "id": 4,
-      "titleItem": "MacBook",
-      "model": "Air 13",
+      "titleItem": "SAMSUNG",
+      "model": "QE58Q60TAUXUA",
       "price": 2000,
       "description": "",
-      "img": "https://i1.foxtrot.com.ua/product/thumb/6570047.jpg",
+      "img": "https://i1.foxtrot.com.ua/product/MediumImages/6557938_0.jpg",
       "imgPhotos": [
-        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_0.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_1.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6570047_5.jpg"
+        "https://i1.foxtrot.com.ua/product/MediumImages/6557938_0.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6557938_1.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6557938_3.jpg"
       ],
       "specifications": [
         {
@@ -145,8 +145,8 @@
           "value": "SnapDragon 656"
         }
       ],
-      "urlVideoId": "f-8cVqANmbI",
-      "titleCategory": "laptop"
+      "urlVideoId": "-xTo7xvkZFo",
+      "titleCategory": "TV"
     },
     {
       "id": 5,
@@ -154,11 +154,11 @@
       "model": "S20",
       "price": 1299,
       "description": "",
-      "img": "https://i1.foxtrot.com.ua/product/thumb/6535851.jpg",
+      "img": "https://i1.foxtrot.com.ua/product/MediumImages/6570396_0.jpg",
       "imgPhotos": [
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_1.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_2.jpg",
-        "https://i1.foxtrot.com.ua/product/SmallImages/6525224_3.jpg"
+        "https://i1.foxtrot.com.ua/product/MediumImages/6570396_0.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6570396_2.jpg",
+        "https://i1.foxtrot.com.ua/product/MediumImages/6570396_1.jpg"
       ],
       "specifications": [
         {
@@ -182,8 +182,8 @@
           "value": "SnapDragon 656"
         }
       ],
-      "urlVideoId": "Lz1TdMCPg0I",
-      "titleCategory": "phone"
+      "urlVideoId": "7GgGMXurLnU",
+      "titleCategory": "TV"
     },
     {
       "id": 6,

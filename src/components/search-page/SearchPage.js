@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {
   AnyOneResults, Button,
   ButtonInfo,
@@ -15,7 +15,7 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCategory }) => {
+const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCategory,onIncrease}) => {
   const { t } = useTranslation();
   let query = useQuery();
   let assignment = query.get("w");
@@ -31,18 +31,17 @@ const SearchPage = ({ fetchProductsOnName, searchedProducts, fetchProductsOnCate
   if (searchedProducts === undefined) {
     return null;
   }
-
+  console.log(searchedProducts)
   return searchedProducts.length > 0 ? (
     <Results>
-
         {searchedProducts.map((item) => (
           <ItemStyle>
-            <img src={item.img} width='128px' height='128px'/>
+            <img src={item.img} width='180px' height='180px'/>
             <ItemInfo>
               <ItemInfoTitle>{`${item.titleItem} ${item.model}`}</ItemInfoTitle>
               <ItemInfoPrice>{`${item.price} $`}</ItemInfoPrice>
-              <Button> {t('Buy')} </Button>
-              <ButtonInfo> {t('Details')} </ButtonInfo>
+              <Button onClick={()=>onIncrease(item.id)}> {t('Buy')} </Button>
+              <Link to={`/info?id=${item.id}`}><ButtonInfo> {t('Details')} </ButtonInfo></Link>
             </ItemInfo>
           </ItemStyle>
         ))}

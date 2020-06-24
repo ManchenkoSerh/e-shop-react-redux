@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Table, TD } from "./shopping-cart-style";
+import {ButtonOrder, Table, TD, TotalSum} from "./shopping-cart-style";
 import ShoppingCartItem from "../shopping-cart-item/shopping-cart-item";
 import {useTranslation} from "react-i18next";
 
@@ -40,7 +40,8 @@ const ShoppingCartTable = ({
         })}
       </ul>
 
-      <div className="total">{t('Subtotal')}: {totalSum()}</div>
+      <TotalSum>{t('Subtotal')}: {totalSum()}$</TotalSum>
+      <ButtonOrder>{t('ToOrder')}</ButtonOrder>
     </div>
   );
 };

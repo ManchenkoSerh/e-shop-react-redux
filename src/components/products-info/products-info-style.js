@@ -19,7 +19,9 @@ width:68px;
 margin: 40px 20px 0 20px
 `
 export const ListItemImg=styled.img`
-justify-content:space-around
+justify-content:space-around;
+width:80px;
+height:80px
 `
 export const GeneralInfoToProduct=styled.div`
 float:right;

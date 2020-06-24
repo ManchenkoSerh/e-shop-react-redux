@@ -4,17 +4,26 @@ import {Item} from "../products-list-items/products-list-items-style";
 const Results = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding:20px;
 `
 
 const AnyOneResults = styled.p`
     font-size: 1.5rem;
  `
+
+
+
+// display: flex;
+  // width: 23.3%;
+  // border: 1px solid black;
+  // margin: 5px;
+  // padding: 10px
 const ItemStyle = styled.div`
-  display: flex;
-  width: 23.3%;
-  border: 1px solid black;
+    padding: 15px;
   margin: 5px;
-  padding: 10px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  width: 22.2%;
 `
 
 const ItemInfo = styled.div`

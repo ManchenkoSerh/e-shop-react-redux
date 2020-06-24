@@ -4,6 +4,7 @@ const Container = styled.div`
   width: 100%;
   background: #e95d2a;
   min-height: 6vh;
+  position:fix;
 `;
 
 const Wrapper = styled.div`

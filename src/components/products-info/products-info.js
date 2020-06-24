@@ -11,6 +11,7 @@ import {
 import VideoProduct from "./video-products";
 import Comments from "../../container/list-comments/Comments";
 import Characteristics from "../characteristics/characteristics";
+import {useTranslation} from "react-i18next";
 
 const ProductsInfo = ({
   getProductInfo,
@@ -19,11 +20,12 @@ const ProductsInfo = ({
   videoUrl,
   fetchComments,
   comments = [],
-                          saveUrl,
-                          urlSave,
-                          shoppingCart,
-                          onIncrease,
-                          products,deletedUrl
+  saveUrl,
+  urlSave,
+  shoppingCart,
+  onIncrease,
+  products,
+  deletedUrl,
 }) => {
   function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -31,47 +33,52 @@ const ProductsInfo = ({
 
   let query = useQuery();
   useEffect(() => {
-      //deletedUrl();
+    //deletedUrl();
     getProductInfo(query.get("id"));
     fetchComments(query.get("id"));
   }, [query.get("id")]);
 
-const changePhoto=(img)=>{
-    saveUrl(img.currentTarget.src)
-}
+  const changePhoto = (img) => {
+    saveUrl(img.currentTarget.src);
+  };
+
+  const {t} = useTranslation()
   return (
     <ProductInfoContainer>
-        <GeneralInfoToProduct>
-      <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
-        <ProductPrice>{productsInfo.price}$</ProductPrice>
-        <Button onClick={()=>onIncrease(productsInfo.id)}>Додати в корзину</Button>
-        </GeneralInfoToProduct>
+      <div style={{display: 'flex'}}>
         <ImgInfoToProduct>
-      <ListImg>
-        {productsInfo.imgPhotos != undefined
-          ? productsInfo.imgPhotos.map((img) => {
-              return (
-                <li>
-                  <ListItemImg onClick={changePhoto} src={img} />
-                </li>
-              );
-            })
-          : null}
-      </ListImg>
-            <Img src={(urlSave==undefined)?productsInfo.img:urlSave} />
+          <ListImg>
+            {productsInfo.imgPhotos != undefined
+              ? productsInfo.imgPhotos.map((img) => {
+                return (
+                  <li>
+                    <ListItemImg onClick={changePhoto} src={img} />
+                  </li>
+                );
+              })
+              : null}
+          </ListImg>
+          <Img src={urlSave == undefined ? productsInfo.img : urlSave} />
         </ImgInfoToProduct>
+        <GeneralInfoToProduct>
+          <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
+          <ProductPrice>{productsInfo.price}$</ProductPrice>
+          <Button onClick={() => onIncrease(productsInfo.id)}>
+            {t('Buy')}
+          </Button>
+        </GeneralInfoToProduct>
+      </div>
       <Characteristics productsInfo={productsInfo} />
       <VideoInfo>
         {/*<h2>Відеоогляд</h2>*/}
-      <iframe
-        src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
-        width="100%"
-        height="500px"
-      />
+        <iframe
+          src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
+          width="100%"
+          height="800px"
+        />
       </VideoInfo>
 
-        <Comments comments={comments} />
-
+      <Comments comments={comments} />
     </ProductInfoContainer>
   );
 };

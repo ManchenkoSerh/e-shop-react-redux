@@ -7,11 +7,13 @@ import {
     ListCharacteristics,
     Value
 } from "./characteristics-style";
+import {useTranslation} from "react-i18next";
 
 const Characteristics=({productsInfo})=>{
+  const {t} = useTranslation()
     return(
         <Characteristic>
-            <h2>Характеристики</h2>
+            <h2>{t('Specifications')}</h2>
             <ListCharacteristics>
                 {productsInfo.imgPhotos != undefined
                     ? productsInfo.specifications.map((item) => {

@@ -10,6 +10,7 @@ import {
     TextArea
 } from "./comments-style";
 import {useForm} from "react-hook-form";
+import {useTranslation} from "react-i18next";
 
 const AddComments = ({ addComments, productsInfo, comments }) => {
   let input, input2;
@@ -33,27 +34,27 @@ const AddComments = ({ addComments, productsInfo, comments }) => {
         let modal=document.querySelector(`.modal`)
         modal.style.display="none"
     }
-  console.log(comments);
+  const {t} = useTranslation()
   return (
     <CommentsContainer>
-      <h2>Відгуки</h2>
+      <h2>{t('Customer reviews')}</h2>
         <Modal  className="modal">
             <ModalContent>
                 <ExitModal onClick={Exit}>&times;</ExitModal>
-                <h2>Залишити коментар</h2>
+                <h2>{t('Your review')}</h2>
                 <form onSubmit={onSubmit}>
                   <div>
                     <div>
-                      <input ref={node=>input=node} placeholder="Введіть ім'я" /><br/>
-                      <TextArea ref={node=>input2=node} placeholder="Введите текст" />
+                      <input ref={node=>input=node} placeholder={t('Your name')} /><br/>
+                      <TextArea ref={node=>input2=node} placeholder={t('Your review')} />
                     </div>
-                    <button type="submit">add</button>
+                    <button type="submit">{t('Add review')}</button>
                   </div>
                 </form>
             </ModalContent>
         </Modal>
 
-        <ButtonAdd onClick={handlerAddComments}>add comments</ButtonAdd>
+        <ButtonAdd onClick={handlerAddComments}>{t('Add review')}</ButtonAdd>
       <ListComments>
         {comments.map((item) => {
           const { id, name, comments } = item;

@@ -75,7 +75,7 @@ function data(state = initialState, action) {
       return {
         ...state,
         searchedProducts: state.products.filter((item) =>
-          item.titleCategory.toLowerCase() === action.payload
+          item.titleCategory.toLowerCase() === action.payload.toLowerCase()
         ),
       };
     case ADD_TO_SHOPPING_CART: {

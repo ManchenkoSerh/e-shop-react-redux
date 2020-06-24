@@ -24,8 +24,6 @@ width:80px;
 height:80px
 `
 export const GeneralInfoToProduct=styled.div`
-float:right;
-margin:60px 25% 0 0;
 `
 export const Button=styled.button`
   font-size: 1.2em;

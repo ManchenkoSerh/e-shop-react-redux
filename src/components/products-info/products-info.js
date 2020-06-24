@@ -61,7 +61,10 @@ const ProductsInfo = ({
   const toTop = () => {
     const top = document.querySelector(".top"); //let scroll=document.querySelector(".scroll");
     top.style.display = "none";
-    window.scrollTo(0, 0);
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
   };
 
   // if(isLoading){

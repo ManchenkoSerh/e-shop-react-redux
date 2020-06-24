@@ -3,25 +3,39 @@ import styled from "styled-components";
 export const CommentsContainer=styled.div`
 margin-top: 30px;
 width:100%;
-height:300px;
+
 
 
 `
 export const ListCommentsItem=styled.li`
 list-style-type: none;
-margin-top:15px;
-padding-top:8px;
+padding:10px 8px;
+height:90px;
+border:1px solid grey;
+border-radius:5px; 
+  background:RGBA(255,255,255,1);
+  -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);        
+  box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);  
 
 `
 export const ListComments=styled.ul`
-overflow-y:scroll;
-height:150px;
-margin-top:10px;
+margin-top:20px;
 `
 export const TextArea=styled.textarea`
-width:200px;
-height:50px;
-margin-top:10px;
+ background: rgba(255, 255, 255, 0.4); 
+    width:100%;
+    height: 120px;
+    border:rgba(0,0,0,.3) 2px solid;
+    box-sizing:border-box;
+    -moz-border-radius: 3px;
+    font-size:18px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+    display:block;
+    padding:10px;
+    margin-bottom:30px;
+    overflow:hidden;
 `
 export const Modal=styled.div`
   display: none; 
@@ -56,5 +70,41 @@ export const ExitModal=styled.span`
 float:right;
 cursor:pointer;
 font-size:1.5em
+`
+export const Form = styled.form`
+margin:0 auto;
+ 
+`
+export const TextBox=styled.input`
+height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 2px solid;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size:18px; 
+  padding:10px;
+  margin-bottom:30px;
+  `
+export const Submit=styled.button`
+ height:50px;
+  width:100%;
+  border-radius:3px;
+  border:rgba(0,0,0,.3) 0px solid;
+  box-sizing:border-box;
+  padding:10px;
+  background:#90c843;
+  color:#FFF;
+  font-family: 'Open Sans', sans-serif;  
+  font-weight:400;
+  font-size: 16pt;
+  transition:background .4s;
+  cursor:pointer;
+`
+export const ImgProfile=styled.img`
+height:50px;
+width:50px;
+float:left;
+margin:8px;
 `
 

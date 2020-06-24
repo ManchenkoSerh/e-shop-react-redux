@@ -9,7 +9,7 @@ import {
   Categories,
   Favorite,
   Cart,
-  MainButton,
+  MainButton, ChangeLanguage,
 } from "./Header-style";
 import { Link, useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -74,8 +74,8 @@ const Header = () => {
         <Link to="/shopping-cart">
           <Cart>{t("Cart")}</Cart>
         </Link>
-        <button onClick={() => changeLanguage("en")}>en</button>
-        <button onClick={() => changeLanguage("ua")}>ua</button>
+        <ChangeLanguage onClick={() => changeLanguage("en")}>En</ChangeLanguage>
+        <ChangeLanguage onClick={() => changeLanguage("ua")}>Ua</ChangeLanguage>
       </Wrapper>
     </Container>
   );

@@ -99,5 +99,15 @@ const Cart = styled.button`
     background-color: #3e8e41;
   }
 `
+const  ChangeLanguage=styled.a`
+font-size:1.4em;
+color:white;
+padding:3vh 1vh;
+cursor:pointer;
+&&:hover{
+text-decoration:underline;
+}
+`
 
-export {Input, Wrapper, CatalogInner, Catalog, Container, CatalogButton, Categories, Favorite, Cart, MainButton}
+
+export {Input, Wrapper, CatalogInner, Catalog, Container, CatalogButton, Categories, Favorite, Cart,ChangeLanguage, MainButton}

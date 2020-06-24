@@ -2,13 +2,13 @@ import React from "react";
 import {
   ButtonAdd,
   CommentsContainer,
-  ExitModal,
+  ExitModal, Form, ImgProfile,
   InputComments,
   ListComments,
   ListCommentsItem,
   Modal,
-  ModalContent,
-  TextArea,
+  ModalContent, Submit,
+  TextArea, TextBox,
 } from "./comments-style";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -43,10 +43,10 @@ const AddComments = ({ addComments, productsInfo, comments }) => {
         <ModalContent>
           <ExitModal onClick={Exit}>&times;</ExitModal>
           <h2>{t("Your review")}</h2>
-          <form onSubmit={onSubmit}>
+          <Form onSubmit={onSubmit}>
             <div>
               <div>
-                <input
+                <TextBox
                   ref={(node) => (input = node)}
                   placeholder={t("Your name")}
                 />
@@ -56,9 +56,9 @@ const AddComments = ({ addComments, productsInfo, comments }) => {
                   placeholder={t("Your review")}
                 />
               </div>
-              <button type="submit">{t("Add review")}</button>
+              <Submit>{t("Add review")}</Submit>
             </div>
-          </form>
+          </Form>
         </ModalContent>
       </Modal>
 
@@ -68,6 +68,7 @@ const AddComments = ({ addComments, productsInfo, comments }) => {
           const { id, name, comments } = item;
           return (
             <ListCommentsItem key={id}>
+              <ImgProfile src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSQ-rO2aSvnGQKLbWPUOcuTC0Af9ipDQ9DqlE2TdxcIw&usqp=CAU&ec=45673586"/>
               <h3>{name}</h3>
               <p>{comments}</p>
             </ListCommentsItem>

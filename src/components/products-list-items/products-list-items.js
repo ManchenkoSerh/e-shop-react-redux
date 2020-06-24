@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, ButtonInfo, Img, Item } from "./products-list-items-style";
 import { Link } from "react-router-dom";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const ProductsListItem = ({ item, onIncrease }) => {
   const { t } = useTranslation();
@@ -16,9 +16,9 @@ const ProductsListItem = ({ item, onIncrease }) => {
         </h3>
         <span>{item.price}$</span>
         <br />
-        <Button onClick={onIncrease}>{t('Buy')}</Button>
+        <Button onClick={onIncrease}>{t("Buy")}</Button>
         <Link to={`/info?id=${item.id}`}>
-          <ButtonInfo>{t('Details')}</ButtonInfo>
+          <ButtonInfo>{t("Details")}</ButtonInfo>
         </Link>
       </div>
     </Item>

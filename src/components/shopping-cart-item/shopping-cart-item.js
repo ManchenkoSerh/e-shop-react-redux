@@ -31,7 +31,7 @@ const ShoppingCartItem = ({ item, onIncrease, onDecrease, onDeleted }) => {
         <BtnIncrement onClick={onIncrease}>+</BtnIncrement>
       </Quantity>
       <TotalSum>
-        {t('Sum')}
+        {t("Sum")}
         <br />
         {item.total}$
       </TotalSum>

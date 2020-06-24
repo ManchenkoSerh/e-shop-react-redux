@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import ListProducts from "../../container/list-products/ListProducts";
-import ProductsInfo from "../../components/products-info/products-info";
 import SearchPageContainer from "../../container/search-page/SearchPageContainer";
 import ShoppingCart from "../../container/shopping-cart/ShoppingCart";
 import ProductInfo from "../../container/product-info/ProductInfo";

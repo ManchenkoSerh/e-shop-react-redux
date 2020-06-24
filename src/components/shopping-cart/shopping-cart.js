@@ -20,7 +20,6 @@ const ShoppingCartTable = ({
   }
 
   const { t } = useTranslation();
-  //console.log(a)
   return (
     <div className="shopping-cart-table">
       <h2>{t('Shopping Cart')}</h2>

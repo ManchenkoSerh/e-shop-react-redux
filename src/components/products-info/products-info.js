@@ -68,82 +68,45 @@ const ProductsInfo = ({
   //   return <Spinner/>
   // }
   return (
-    <ProductInfoContainer>
-      <div style={{ display: "flex" }}>
-        <ImgInfoToProduct>
-          <ListImg>
-            {productsInfo.imgPhotos != undefined
-              ? productsInfo.imgPhotos.map((img) => {
-                  return (
-                    <li>
-                      <ListItemImg onClick={changePhoto} src={img} />
-                    </li>
-                  );
-                })
-              : null}
-          </ListImg>
-          <Img src={urlSave == undefined ? productsInfo.img : urlSave} />
-        </ImgInfoToProduct>
-        <GeneralInfoToProduct>
-          <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
-          <ProductPrice>{productsInfo.price}$</ProductPrice>
-          <Button onClick={() => onIncrease(productsInfo.id)}>
-            {t("Buy")}
-          </Button>
-        </GeneralInfoToProduct>
-      </div>
-      <Characteristics productsInfo={productsInfo} />
-      <VideoInfo>
-        {/*<h2>Відеоогляд</h2>*/}
-        <iframe
-          src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
-          width="100%"
-          height="800px"
-        />
-      </VideoInfo>
-
       <ProductInfoContainer className="scroll">
         <ToTop className="top" onClick={toTop}>
           Top
         </ToTop>
-        <GeneralInfoToProduct>
-          <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
-          <ProductPrice>{productsInfo.price}$</ProductPrice>
-          <Button onClick={() => onIncrease(productsInfo.id)}>
-            Додати в корзину
-          </Button>
-        </GeneralInfoToProduct>
-        <ImgInfoToProduct>
-          <ListImg>
-            {productsInfo.imgPhotos != undefined
-              ? productsInfo.imgPhotos.map((img) => {
+        <div style={{display: 'flex'}}>
+          <ImgInfoToProduct>
+            <ListImg>
+              {productsInfo.imgPhotos != undefined
+                ? productsInfo.imgPhotos.map((img) => {
                   return (
                     <li>
                       <ListItemImg onClick={changePhoto} src={img} />
                     </li>
                   );
                 })
-              : null}
-          </ListImg>
-          <Img src={urlSave == undefined ? productsInfo.img : urlSave} />
-        </ImgInfoToProduct>
+                : null}
+            </ListImg>
+            <Img src={urlSave == undefined ? productsInfo.img : urlSave} />
+          </ImgInfoToProduct>
+          <GeneralInfoToProduct>
+            <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
+            <ProductPrice>{productsInfo.price}$</ProductPrice>
+            <Button onClick={() => onIncrease(productsInfo.id)}>
+              Додати в корзину
+            </Button>
+          </GeneralInfoToProduct>
+        </div>
         <Characteristics productsInfo={productsInfo} />
         <VideoInfo>
           {/*<h2>Відеоогляд</h2>*/}
           <iframe
             src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
             width="100%"
-            height="500px"
+            height="800px"
           />
         </VideoInfo>
 
         <Comments comments={comments} />
       </ProductInfoContainer>
-      <Comments comments={comments} />
-    </ProductInfoContainer>
-    // )}
-    //
-    // </div>
   );
 };
 export default ProductsInfo;

@@ -23,6 +23,7 @@ const AddComments = ({ addComments, productsInfo, comments }) => {
   const { t } = useTranslation();
   return (
     <CommentsContainer>
+      <hr/>
       <CommentsTitle>{t("Customer reviews")}</CommentsTitle>
       <CommentsModal productsInfo={productsInfo} addComments={addComments} />
       <ListComments>

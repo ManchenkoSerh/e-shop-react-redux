@@ -83,13 +83,13 @@ const ProductsInfo = ({
               <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
               <ProductPrice>{productsInfo.price}$</ProductPrice>
               <Button onClick={() => onIncrease(productsInfo.id)}>
-                Додати в корзину
+                {t("Add to cart")}
               </Button>
             </GeneralInfoToProduct>
           </div>
           <Characteristics productsInfo={productsInfo} />
           <VideoInfo>
-            <VideoReview>Відеоогляд</VideoReview>
+            <VideoReview>{t("Video view")}</VideoReview>
             <iframe
               src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
               width="100%"

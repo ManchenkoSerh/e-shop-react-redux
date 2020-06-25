@@ -2,8 +2,8 @@
   "products": [
     {
       "id": 1,
-      "titleItem": "Samsung",
-      "model": "S20",
+      "titleItem": "Iphone",
+      "model": "8 plus",
       "price": 1299,
       "description": "",
       "img": "https://i1.foxtrot.com.ua/product/MediumImages/6423073_0.jpg",
@@ -15,7 +15,7 @@
       "specifications": [
         {
           "key": "тип",
-          "value": "смартфон"
+          "value": "Телефон"
         },
         {
           "key": "дісплей",
@@ -26,12 +26,16 @@
           "value": "SnapDragon 656"
         },
         {
-          "key": "дісплей",
-          "value": "1024x1050"
+          "key": "діагональ",
+          "value": "32'"
         },
         {
-          "key": "процесор",
-          "value": "SnapDragon 656"
+          "key": "Тип підсвітки",
+          "value": "LED"
+        },
+        {
+          "key": "Гарантія",
+          "value": "12 місяців"
         }
       ],
       "urlVideoId": "BAQ6tkiQheo",
@@ -52,7 +56,7 @@
       "specifications": [
         {
           "key": "тип",
-          "value": "смартфон"
+          "value": "Ноутбук"
         },
         {
           "key": "дісплей",
@@ -63,12 +67,16 @@
           "value": "SnapDragon 656"
         },
         {
-          "key": "дісплей",
-          "value": "1024x1050"
+          "key": "діагональ",
+          "value": "32'"
         },
         {
-          "key": "процесор",
-          "value": "SnapDragon 656"
+          "key": "Тип підсвітки",
+          "value": "LED"
+        },
+        {
+          "key": "Гарантія",
+          "value": "12 місяців"
         }
       ],
       "urlVideoId": "f-8cVqANmbI",
@@ -76,8 +84,8 @@
     },
     {
       "id": 3,
-      "titleItem": "Sam",
-      "model": "S20",
+      "titleItem": "Xiomi",
+      "model": "Redmi Note 8",
       "price": 1299,
       "description": "",
       "img": "https://i1.foxtrot.com.ua/product/MediumImages/6557837_1.jpg",
@@ -89,7 +97,7 @@
       "specifications": [
         {
           "key": "тип",
-          "value": "смартфон"
+          "value": "Телефон"
         },
         {
           "key": "дісплей",
@@ -100,12 +108,16 @@
           "value": "SnapDragon 656"
         },
         {
-          "key": "дісплей",
-          "value": "1024x1050"
+          "key": "діагональ",
+          "value": "32'"
         },
         {
-          "key": "процесор",
-          "value": "SnapDragon 656"
+          "key": "Тип підсвітки",
+          "value": "LED"
+        },
+        {
+          "key": "Гарантія",
+          "value": "12 місяців"
         }
       ],
       "urlVideoId": "Xa7FQ72lp9w",
@@ -126,7 +138,7 @@
       "specifications": [
         {
           "key": "тип",
-          "value": "смартфон"
+          "value": "Телевізор"
         },
         {
           "key": "дісплей",
@@ -137,12 +149,16 @@
           "value": "SnapDragon 656"
         },
         {
-          "key": "дісплей",
-          "value": "1024x1050"
+          "key": "діагональ",
+          "value": "32'"
         },
         {
-          "key": "процесор",
-          "value": "SnapDragon 656"
+          "key": "Тип підсвітки",
+          "value": "LED"
+        },
+        {
+          "key": "Гарантія",
+          "value": "12 місяців"
         }
       ],
       "urlVideoId": "-xTo7xvkZFo",
@@ -163,7 +179,7 @@
       "specifications": [
         {
           "key": "тип",
-          "value": "смартфон"
+          "value": "Телевізор"
         },
         {
           "key": "дісплей",
@@ -174,12 +190,16 @@
           "value": "SnapDragon 656"
         },
         {
-          "key": "дісплей",
-          "value": "1024x1050"
+          "key": "діагональ",
+          "value": "32'"
         },
         {
-          "key": "процесор",
-          "value": "SnapDragon 656"
+          "key": "Тип підсвітки",
+          "value": "LED"
+        },
+        {
+          "key": "Гарантія",
+          "value": "12 місяців"
         }
       ],
       "urlVideoId": "7GgGMXurLnU",

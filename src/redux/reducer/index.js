@@ -210,7 +210,8 @@ function data(state = initialState, action) {
             ...state.shoppingCart.slice(itemIndex + 1),
           ],
         };
-      } else {
+      }
+      else {
         return {
           ...state,
           shoppingCart: [

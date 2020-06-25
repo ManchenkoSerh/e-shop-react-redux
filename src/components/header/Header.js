@@ -74,7 +74,7 @@ const Header = () => {
         <Link to="/shopping-cart">
           <Cart>{t("Cart")}</Cart>
         </Link>
-        <ChangeLanguage onClick={() => changeLanguage("en")}>En</ChangeLanguage>
+        <ChangeLanguage onClick={() => changeLanguage("en")}>En |</ChangeLanguage>
         <ChangeLanguage onClick={() => changeLanguage("ua")}>Ua</ChangeLanguage>
       </Wrapper>
     </Container>

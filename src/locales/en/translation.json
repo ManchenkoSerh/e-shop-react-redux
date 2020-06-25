@@ -23,6 +23,8 @@
   "Processor": "Processor",
   "Customer reviews": "Customer reviews",
   "Your name": "Your name",
+  "Your surname": "Your surname",
+  "Your address": "Your address",
   "Your review": "Your review",
   "Add review": "Add review",
   "Shopping Cart": "Shopping Cart",
@@ -30,5 +32,7 @@
   "Sum": "Price",
   "On request found 0 products": "On request",
   "found 0 products": "found 0 products",
-  "ToOrder": "To Order"
+  "ToOrder": "To Order",
+  "Payment": "Payment info",
+  "Checkout": "Checkout"
 }

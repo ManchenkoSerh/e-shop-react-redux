@@ -25,7 +25,7 @@ const ShoppingCartModal=()=>{
         <Modal className="modal">
             <ModalContent>
                 <ExitModal onClick={Exit}>&times;</ExitModal>
-                <h2>{t("Your review")}</h2>
+                <h2>{t("Payment")}</h2>
                 <Form onSubmit={onSubmit}>
                     <div>
                         <div>
@@ -39,7 +39,7 @@ const ShoppingCartModal=()=>{
                                 placeholder={t("Your address")}
                             />
                         </div>
-                        <Submit>{t("Add review")}</Submit>
+                        <Submit>{t("Checkout")}</Submit>
                     </div>
                 </Form>
             </ModalContent>

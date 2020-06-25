@@ -8,7 +8,7 @@ const Slider=()=>{
     return(
         <div>
         <Carousel
-            autoPlay={4000}
+            autoPlay={5000}
             animationSpeed={1000}
             infinite
         >

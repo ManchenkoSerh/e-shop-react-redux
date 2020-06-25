@@ -100,9 +100,9 @@ const Cart = styled.button`
   }
 `
 const  ChangeLanguage=styled.a`
-font-size:1.4em;
+font-size:1.3em;
 color:white;
-padding:4vh 1vh;
+padding: 20px 2px;
 cursor:pointer;
 &&:hover{
 text-decoration:underline;

@@ -23,6 +23,8 @@
   "Processor": "Процессор",
   "Customer reviews": "Користувацькі відгуки",
   "Your name": "Ваше ім'я",
+  "Your surname": "Ваша фамілія",
+  "Your address": "Ваша адреса",
   "Your review": "Ваш відгук",
   "Add review": "Додати відгук",
   "Shopping Cart": "Кошик",
@@ -31,6 +33,8 @@
   "On request": "По запиту",
   "found 0 products": "знайшлося 0 товарів",
   "ToOrder": "Оформити замовлення",
+  "Payment": "Інформація про оплату ",
+  "Checkout": "Оформити замовлення",
   "Add to cart": "Додати в корзину",
   "Video view":"Відеоогляд"
 }

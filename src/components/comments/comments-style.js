@@ -103,8 +103,11 @@ export const Submit=styled.button`
 `
 export const ImgProfile=styled.img`
 height:50px;
-width:50px;
+width:60px;
 float:left;
 margin:8px;
+`
+export const CommentsTitle=styled.h2`
+padding: 30px;
 `
 

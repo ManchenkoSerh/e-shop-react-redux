@@ -3,7 +3,7 @@ import ProductsInfo from "../../components/products-info/products-info";
 import {
   addToShoppingCart,
   deletedUrl,
-  fetchComments,
+  fetchComments, fetchProducts,
   fetchVideoInfo,
   getProductInfo,
   saveUrl,
@@ -21,6 +21,7 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = (dispatch) => ({
   getProductInfo: (id) => dispatch(getProductInfo(id)),
+  fetchProducts:()=>dispatch(fetchProducts()),
   onIncrease: (id) => dispatch(addToShoppingCart(id)),
   fetchComments: (id) => dispatch(fetchComments(id)),
   saveUrl: (url) => dispatch(saveUrl(url)),

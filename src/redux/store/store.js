@@ -33,9 +33,7 @@ const store = createStore(
 );
 store.subscribe(() => {
   saveState({
-    shoppingCart: store.getState().shoppingCart,
-    products: store.getState().shoppingCart,
-    //productsInfo:store.getState().productsInfo
+    shoppingCart: store.getState().shoppingCart
   });
 });
 export default store;

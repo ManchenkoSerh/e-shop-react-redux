@@ -28,6 +28,7 @@
   "Shopping Cart": "Shopping Cart",
   "Subtotal": "Subtotal",
   "Sum": "Price",
-  "No results": "Anyone results :(",
+  "On request found 0 products": "On request",
+  "found 0 products": "found 0 products",
   "ToOrder": "To Order"
 }

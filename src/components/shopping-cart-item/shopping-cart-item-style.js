@@ -47,6 +47,7 @@ export const TotalSum = styled.span`
 `;
 export const BtnDelete=styled.button`
  width: 18px;
+ border:none;
   height: 17px;
   margin-top:27px;
   

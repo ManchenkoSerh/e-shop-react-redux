@@ -4,6 +4,7 @@ import { Container } from "./products-list-style";
 import Slider from "../Slider/slider";
 import { Wrapper } from "../footer/footer-style";
 import Spinner from "../spinner/spinner";
+import ToUp from "../to-up/ToUp";
 
 const ProductsList = ({
   products = [],
@@ -32,6 +33,7 @@ const ProductsList = ({
           <Wrapper>
             <Slider />
           </Wrapper>
+          <ToUp/>
           <Container>
             {products.map((item) => {
               const { id, ...itemprops } = item;

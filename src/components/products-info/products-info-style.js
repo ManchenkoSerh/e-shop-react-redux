@@ -1,49 +1,55 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import React from "react";
-export const ProductInfoContainer=styled.div`
-width:90%;
-margin:10px auto;
-`
-export const Img=styled.img`
-width:300px;
-height:320px;
-margin:5px 10px 0 10px;
-`
-export const ImgInfoToProduct=styled.div`
-display:flex;
-`
-export const ListImg=styled.ul`
-display:flex-column;
-list-style-type: none;
-width:68px;
-margin: 40px 20px 0 20px
-`
-export const ListItemImg=styled.img`
-justify-content:space-around;
-width:80px;
-height:80px
-`
-export const GeneralInfoToProduct=styled.div`
-`
-export const Button=styled.button`
+export const ProductInfoContainer = styled.div`
+  width: 90%;
+  margin: 10px auto;
+`;
+export const Img = styled.img`
+  width: 300px;
+  height: 320px;
+  margin: 5px 10px 0 10px;
+`;
+export const ImgInfoToProduct = styled.div`
+  display: flex;
+`;
+export const ListImg = styled.ul`
+  display: flex-column;
+  list-style-type: none;
+  width: 68px;
+  margin: 40px 20px 0 20px;
+`;
+export const ListItemImg = styled.img`
+  justify-content: space-around;
+  width: 80px;
+  height: 80px;
+`;
+export const GeneralInfoToProduct = styled.div``;
+export const Button = styled.button`
   font-size: 1.2em;
   border: 2px solid #f64c2b;
   border-radius: 5px;
   box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #800;
   background: linear-gradient(#fb9575, #f45a38 48%, #ea1502 52%, #f02f17);
-  margin:20px 0 0 20px;
-`
-export const ProductPrice= styled.span`
-padding-top:20px;
-margin-top:20px;
-font-size:1.5em
-`
-export const  VideoInfo =styled.div`
-padding:40px auto;
-`
-export const ToTop=styled.button`
- display: none;
-  background-color: #FF9800;
+  margin: 20px 0 0 20px;
+  :hover{
+  opacity:0.8;
+  cursor:pointer;
+  }
+`;
+export const ProductPrice = styled.span`
+  padding-top: 20px;
+  margin-top: 20px;
+  font-size: 1.5em;
+`;
+export const VideoReview = styled.h2`
+  padding: 30px;
+`;
+export const VideoInfo = styled.div`
+  padding: 40px auto;
+`;
+export const ToTop = styled.button`
+  display: none;
+  background-color: #ff9800;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -52,6 +58,6 @@ export const ToTop=styled.button`
   bottom: 30px;
   right: 30px;
   transition: background-color;
-  opacity:0.4;
-  color:white;
-`
+  opacity: 0.4;
+  color: white;
+`;

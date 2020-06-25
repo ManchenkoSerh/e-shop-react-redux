@@ -12,6 +12,10 @@ export const Button = styled.button`
   box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #800;
   background: linear-gradient(#fb9575, #f45a38 48%, #ea1502 52%, #f02f17);
   margin-bottom: 8px;
+  :hover{
+  opacity:0.8;
+  cursor:pointer;
+  }
 `;
 
 export const Item = styled.div`
@@ -28,7 +32,9 @@ export const ButtonInfo = styled(Button)`
   color: white;
   display: none;
   ${Item}:hover & {
-    display: inline-block;
+  display: inline-block;
+  cursor:pointer;
+
   }
 `;
 // export const Button=styled.button

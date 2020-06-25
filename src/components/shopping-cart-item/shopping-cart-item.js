@@ -16,6 +16,7 @@ import {
 const ShoppingCartItem = ({ item, onIncrease, onDecrease, onDeleted }) => {
   const { t } = useTranslation();
   // const {name,price,count}=items
+    console.log(item)
   return (
     <TableItem>
       <BtnDelete onClick={onDeleted}>X</BtnDelete>

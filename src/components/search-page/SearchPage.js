@@ -39,11 +39,10 @@ const SearchPage = ({
   if (searchedProducts === undefined) {
     return null;
   }
-  if (isLoading) {
-    return <Spinner />;
-  }
-  console.log(searchedProducts);
-  return searchedProducts.length > 0 ? (
+
+  return isLoading ? (
+    <Spinner />
+  ) : searchedProducts.length > 0 ? (
     <Results>
       {searchedProducts.map((item) => (
         <ItemStyle>
@@ -60,8 +59,13 @@ const SearchPage = ({
       ))}
     </Results>
   ) : (
-    <AnyOneResults> {t("No results")} </AnyOneResults>
+    <AnyOneResults>
+      {t("On request") +
+        ' "' +
+        query.get("w") +
+        '" ' +
+        t("found 0 products")}
+    </AnyOneResults>
   );
 };
-
 export default SearchPage;

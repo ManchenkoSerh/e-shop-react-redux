@@ -2,6 +2,17 @@ import React, { useEffect } from "react";
 import {ButtonOrder, Table, TD, TotalSum} from "./shopping-cart-style";
 import ShoppingCartItem from "../shopping-cart-item/shopping-cart-item";
 import {useTranslation} from "react-i18next";
+import {
+    CommentsContainer,
+    ExitModal,
+    Form,
+    Modal,
+    ModalContent,
+    Submit,
+    TextArea,
+    TextBox
+} from "../comments/comments-style";
+import ShoppingCartModal from "./shopping-cart-modal";
 
 const ShoppingCartTable = ({
   shoppingCart = [],
@@ -38,9 +49,8 @@ const ShoppingCartTable = ({
           );
         })}
       </ul>
-
       <TotalSum>{t('Subtotal')}: {totalSum()}$</TotalSum>
-      <ButtonOrder>{t('ToOrder')}</ButtonOrder>
+        <ShoppingCartModal/>
     </div>
   );
 };

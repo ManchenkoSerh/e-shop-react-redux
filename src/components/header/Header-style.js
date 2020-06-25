@@ -102,7 +102,7 @@ const Cart = styled.button`
 const  ChangeLanguage=styled.a`
 font-size:1.4em;
 color:white;
-padding:3vh 1vh;
+padding:4vh 1vh;
 cursor:pointer;
 &&:hover{
 text-decoration:underline;

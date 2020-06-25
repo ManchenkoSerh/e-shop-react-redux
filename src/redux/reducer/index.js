@@ -91,6 +91,7 @@ function data(state = initialState, action) {
         searchedProducts: state.products.filter((item) =>
           item.titleItem.toLowerCase().includes(action.payload.toLowerCase())
         ),
+        urlSave: undefined
       };
     case FETCH_PRODUCTS_ON_CATEGORY:
       return {
@@ -100,6 +101,7 @@ function data(state = initialState, action) {
           (item) =>
             item.titleCategory.toLowerCase() === action.payload.toLowerCase()
         ),
+        urlSave: undefined
       };
     case ADD_TO_SHOPPING_CART: {
       const productID = action.payload;

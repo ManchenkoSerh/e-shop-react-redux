@@ -11,17 +11,18 @@ import {
   ProductPrice,
   ToTop,
   VideoInfo,
+  VideoReview,
 } from "./products-info-style";
-import VideoProduct from "./video-products";
 import Comments from "../../container/list-comments/Comments";
 import Characteristics from "../characteristics/characteristics";
 import { useTranslation } from "react-i18next";
 import Spinner from "../spinner/spinner";
+import ToUp from "../to-up/ToUp";
 
 const ProductsInfo = ({
   getProductInfo,
   productsInfo = [],
-  fetchVideoInfo,
+                        fetchProducts,
   videoUrl,
   fetchComments,
   comments = [],
@@ -39,77 +40,66 @@ const ProductsInfo = ({
   }
 
   let query = useQuery();
+  async function parseProducts() {
+    await fetchProducts();
+  }
   useEffect(() => {
-    //deletedUrl();
+    parseProducts();
     getProductInfo(query.get("id"));
     fetchComments(query.get("id"));
     window.scrollTo(0, 0);
-    const top = document.querySelector(".top");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        top.style.display = "block";
-      } else {
-        top.style.display = "none";
-      }
-    });
   }, [query.get("id")]);
 
   const { t } = useTranslation();
   const changePhoto = (img) => {
     saveUrl(img.currentTarget.src);
   };
-  const toTop = () => {
-    const top = document.querySelector(".top"); //let scroll=document.querySelector(".scroll");
-    top.style.display = "none";
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-      });
-  };
 
-  // if(isLoading){
-  //   return <Spinner/>
-  // }
   return (
-      <ProductInfoContainer className="scroll">
-        <ToTop className="top" onClick={toTop}>
-          Top
-        </ToTop>
-        <div style={{display: 'flex'}}>
-          <ImgInfoToProduct>
-            <ListImg>
-              {productsInfo.imgPhotos != undefined
-                ? productsInfo.imgPhotos.map((img) => {
-                  return (
-                    <li>
-                      <ListItemImg onClick={changePhoto} src={img} />
-                    </li>
-                  );
-                })
-                : null}
-            </ListImg>
-            <Img src={urlSave == undefined ? productsInfo.img : urlSave} />
-          </ImgInfoToProduct>
-          <GeneralInfoToProduct>
-            <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
-            <ProductPrice>{productsInfo.price}$</ProductPrice>
-            <Button onClick={() => onIncrease(productsInfo.id)}>
-              Додати в корзину
-            </Button>
-          </GeneralInfoToProduct>
-        </div>
-        <Characteristics productsInfo={productsInfo} />
-        <VideoInfo>
-          {/*<h2>Відеоогляд</h2>*/}
-          <iframe
-            src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
-            width="100%"
-            height="800px"
-          />
-        </VideoInfo>
-
-        <Comments comments={comments} />
-      </ProductInfoContainer>
+    <div>
+      {isLoading ? (
+        <Spinner />
+      ) : isError ? (
+        <p>Error</p>
+      ) : (
+        <ProductInfoContainer className="scroll">
+          <ToUp />
+          <div style={{ display: "flex" }}>
+            <ImgInfoToProduct>
+              <ListImg>
+                {productsInfo.imgPhotos != undefined
+                  ? productsInfo.imgPhotos.map((img) => {
+                      return (
+                        <li>
+                          <ListItemImg onClick={changePhoto} src={img} />
+                        </li>
+                      );
+                    })
+                  : null}
+              </ListImg>
+              <Img src={urlSave == undefined ? productsInfo.img : urlSave} />
+            </ImgInfoToProduct>
+            <GeneralInfoToProduct>
+              <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
+              <ProductPrice>{productsInfo.price}$</ProductPrice>
+              <Button onClick={() => onIncrease(productsInfo.id)}>
+                Додати в корзину
+              </Button>
+            </GeneralInfoToProduct>
+          </div>
+          <Characteristics productsInfo={productsInfo} />
+          <VideoInfo>
+            <VideoReview>Відеоогляд</VideoReview>
+            <iframe
+              src={`https://youtube.com/embed/${productsInfo.urlVideoId}`}
+              width="100%"
+              height="800px"
+            />
+          </VideoInfo>
+          <Comments comments={comments} />
+        </ProductInfoContainer>
+      )}
+    </div>
   );
 };
 export default ProductsInfo;

@@ -33,7 +33,7 @@ const store = createStore(
 );
 store.subscribe(() => {
   saveState({
-    shoppingCart: store.getState().shoppingCart
+     shoppingCart: store.getState().shoppingCart
   });
 });
 export default store;

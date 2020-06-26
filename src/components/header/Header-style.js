@@ -4,7 +4,7 @@ const Container = styled.div`
   width: 100%;
   background: #e95d2a;
   min-height: 6vh;
-  position:fix;
+  position: fix;
 `;
 
 const Wrapper = styled.div`
@@ -18,8 +18,8 @@ const Wrapper = styled.div`
 const Catalog = styled.div`
   position: relative;
   display: inline-block;
-  width: 15%
-`
+  width: 15%;
+`;
 
 const CatalogButton = styled.button`
   background-color: #0c061a;
@@ -30,31 +30,31 @@ const CatalogButton = styled.button`
   outline: none;
   cursor: pointer;
   height: 100%;
-  width: 100%
-`
+  width: 100%;
+`;
 
 const MainButton = styled.div`
   margin: 5px auto;
-`
+`;
 
 const CatalogInner = styled.div`
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   ${Catalog}:hover & {
     display: block;
   }
- `
+`;
 
 const Input = styled.input`
   color: white;
   font-size: 16px;
   padding: 15px;
   margin: 10px 20px;
-  background: rgba(255,255,255,.3);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 3px;
   width: 50%;
@@ -71,7 +71,7 @@ const Categories = styled.p`
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-`
+`;
 
 const Favorite = styled.button`
   background-color: #11ffee00;
@@ -84,11 +84,11 @@ const Favorite = styled.button`
   :hover {
     color: #3e8e41;
   }
-`
+`;
 
 const Cart = styled.button`
   margin: 15px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   font-size: 1em;
@@ -98,16 +98,27 @@ const Cart = styled.button`
   :hover {
     background-color: #3e8e41;
   }
-`
-const  ChangeLanguage=styled.a`
-font-size:1.3em;
-color:white;
-padding: 20px 2px;
-cursor:pointer;
-&&:hover{
-text-decoration:underline;
-}
-`
+`;
+const ChangeLanguage = styled.a`
+  font-size: 1.3em;
+  color: white;
+  padding: 20px 2px;
+  cursor: pointer;
+  &&:hover {
+    text-decoration: underline;
+  }
+`;
 
-
-export {Input, Wrapper, CatalogInner, Catalog, Container, CatalogButton, Categories, Favorite, Cart,ChangeLanguage, MainButton}
+export {
+  Input,
+  Wrapper,
+  CatalogInner,
+  Catalog,
+  Container,
+  CatalogButton,
+  Categories,
+  Favorite,
+  Cart,
+  ChangeLanguage,
+  MainButton,
+};

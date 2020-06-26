@@ -39,7 +39,7 @@
         }
       ],
       "urlVideoId": "BAQ6tkiQheo",
-      "favorite": false,
+      "favorite": true,
       "titleCategory": "phone"
     },
     {
@@ -81,7 +81,7 @@
         }
       ],
       "urlVideoId": "f-8cVqANmbI",
-      "favorite": true,
+      "favorite": false,
       "titleCategory": "laptop"
     },
     {
@@ -207,7 +207,7 @@
         }
       ],
       "urlVideoId": "7GgGMXurLnU",
-      "favorite": true,
+      "favorite": false,
       "titleCategory": "TV"
     },
     {

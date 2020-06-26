@@ -30,7 +30,7 @@ export const Button = styled.button`
   border-radius: 5px;
   box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 0.1em 0.1em 0.2em #800;
   background: linear-gradient(#fb9575, #f45a38 48%, #ea1502 52%, #f02f17);
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 0;
   :hover{
   opacity:0.8;
   cursor:pointer;

@@ -6,8 +6,8 @@ width:80%;
 margin:20px;
 `
 export const ImgProduct=styled.img`
-height:20rem;
-width:20rem;
+height:15rem;
+width:15rem;
 `
 export const NameProduct=styled.p`
 font-size:2em;

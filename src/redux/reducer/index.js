@@ -13,14 +13,16 @@ import {
   DELETE_URL,
   FETCH_PRODUCTS_ERROR,
   FETCH_ERROR,
-  FETCH_LOADING, TOGGLE_FAVORITE_SUCCESS, FILTER_FAVORITE_PRODUCT,
+  FETCH_LOADING,
+  TOGGLE_FAVORITE_SUCCESS,
+  FILTER_FAVORITE_PRODUCT,
 } from "../types/types";
 
 const initialState = {
   shoppingCart: [],
   products: [],
   productsInfo: [],
-  favorite:[],
+  favorite: [],
   videoUrl: [],
   comments: [],
   urlSave: [],
@@ -35,6 +37,7 @@ function data(state = initialState, action) {
         ...state,
         products: action.payload,
         isLoading: false,
+        //
       };
     case FETCH_ERROR:
       return {
@@ -90,11 +93,14 @@ function data(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        searchedProducts: state.products.filter((item) =>
-          item.titleItem.toLowerCase().includes(action.payload.toLowerCase()) ||
-          item.model.toLowerCase().includes(action.payload.toLowerCase())
+        searchedProducts: state.products.filter(
+          (item) =>
+            item.titleItem
+              .toLowerCase()
+              .includes(action.payload.toLowerCase()) ||
+            item.model.toLowerCase().includes(action.payload.toLowerCase())
         ),
-        urlSave: undefined
+        urlSave: undefined,
       };
     case FETCH_PRODUCTS_ON_CATEGORY:
       return {
@@ -104,7 +110,7 @@ function data(state = initialState, action) {
           (item) =>
             item.titleCategory.toLowerCase() === action.payload.toLowerCase()
         ),
-        urlSave: undefined
+        urlSave: undefined,
       };
     case ADD_TO_SHOPPING_CART: {
       const productID = action.payload;
@@ -213,8 +219,7 @@ function data(state = initialState, action) {
             ...state.shoppingCart.slice(itemIndex + 1),
           ],
         };
-      }
-      else {
+      } else {
         return {
           ...state,
           shoppingCart: [
@@ -228,23 +233,15 @@ function data(state = initialState, action) {
     case FILTER_FAVORITE_PRODUCT:
       return {
         ...state,
-        favorite:state.products.filter(
-            (item) =>
-                item.favorite == true
-        ),
-
-
-      }
+        favorite: state.products.filter((item) => item.favorite == true),
+      };
     case TOGGLE_FAVORITE_SUCCESS:
-      debugger;
-      return{
+      return {
         ...state,
-       // productsInfo:state.productsInfo.id===action.payload.id?action.payload.productObj:state.productsInfo
-        products:state.products.map(item=>
-              item.id===action.payload.id?action.payload.productObj:item
-          )
-
-      }
+        products: state.products.map((item) =>
+          item.id === action.payload.id ? action.payload.productObj : item
+        ),
+      };
 
     default:
       return state;

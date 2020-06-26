@@ -15,7 +15,7 @@ const Routers = () => {
       <Route path="/shopping-cart" component={ShoppingCart} />
       <Route path="/search" component={SearchPageContainer}/>
       <Route path="/page-not-found" component={ErrorPage}/>
-        <Route path="/favorites" component={ProductsFavorite}/>
+      <Route path="/favorites" component={ProductsFavorite}/>
     </Switch>
   );
 };

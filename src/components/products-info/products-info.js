@@ -19,12 +19,12 @@ import Characteristics from "../characteristics/characteristics";
 import { useTranslation } from "react-i18next";
 import Spinner from "../spinner/spinner";
 import ToUp from "../to-up/ToUp";
-import {Redirect} from "react-router-dom"
+import { Redirect } from "react-router-dom";
 
 const ProductsInfo = ({
   getProductInfo,
   productsInfo = [],
-                        fetchProducts,
+  fetchProducts,
   videoUrl,
   fetchComments,
   comments = [],
@@ -36,7 +36,7 @@ const ProductsInfo = ({
   deletedUrl,
   isLoading,
   isError,
-                        toggleFavorite
+  toggleFavorite,
 }) => {
   function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -57,16 +57,17 @@ const ProductsInfo = ({
   const changePhoto = (img) => {
     saveUrl(img.currentTarget.src);
   };
-
+  if (productsInfo.favorite) {
+  }
   return (
     <div>
       {isLoading ? (
         <Spinner />
       ) : isError ? (
-          <Redirect to="/page-not-found"/>
-      ) :(query.get("id")=="")?(
-          <Redirect to="/page-not-found"/>
-          ) : (
+        <Redirect to="/page-not-found" />
+      ) : query.get("id") == "" ? (
+        <Redirect to="/page-not-found" />
+      ) : (
         <ProductInfoContainer className="scroll">
           <ToUp />
           <div style={{ display: "flex" }}>
@@ -87,14 +88,21 @@ const ProductsInfo = ({
             <GeneralInfoToProduct>
               <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
               <ProductPrice>{productsInfo.price}$</ProductPrice>
-              <AddToFavorite onClick={()=> {
-                toggleFavorite(productsInfo.id, {
-                  ...productsInfo,
-                  favorite: !productsInfo.favorite
-                })
-              }
-
-              }>♥</AddToFavorite>
+              <br />
+              <AddToFavorite
+                style={
+                  productsInfo.favorite ? { color: "red" } : { color: "yellow" }
+                }
+                onClick={() => {
+                  toggleFavorite(productsInfo.id, {
+                    ...productsInfo,
+                    favorite: !productsInfo.favorite,
+                  });
+                }}
+              >
+                ♥
+              </AddToFavorite>
+              <br />
               <Button onClick={() => onIncrease(productsInfo.id)}>
                 {t("Add to cart")}
               </Button>

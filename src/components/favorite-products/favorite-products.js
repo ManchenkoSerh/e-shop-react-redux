@@ -14,7 +14,7 @@ const FavoriteProducts = ({
   filterFavoriteProduct,
   products,
   onIncrease,
-                            fetchFavoriteProduct
+  fetchFavoriteProduct,
 }) => {
   // async function parseProducts() {
   //     await fetchProducts();
@@ -31,14 +31,15 @@ const FavoriteProducts = ({
   console.log(favorite);
   return (
     <div>
+      <h2 style={{padding: "15px 15px"}}>{t("Preferences")}</h2>
       {favorite.map((item) => (
         <FavoriteContainer>
           <ImgProduct src={item.img} />
-          <div style={{padding: '60px'}}>
-              <NameProduct>{`${item.titleItem} ${item.model}`}</NameProduct>
-              <Link to={`/info?id=${item.id}`}>
-                  <ButtonInfo>{t("Details")}</ButtonInfo>
-              </Link>
+          <div style={{ padding: "60px" }}>
+            <NameProduct>{`${item.titleItem} ${item.model}`}</NameProduct>
+            <Link to={`/info?id=${item.id}`}>
+              <ButtonInfo>{t("Details")}</ButtonInfo>
+            </Link>
           </div>
         </FavoriteContainer>
       ))}

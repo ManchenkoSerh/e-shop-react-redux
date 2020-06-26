@@ -45,7 +45,7 @@ const SearchPage = ({
   ) : searchedProducts.length > 0 ? (
     <Results>
       {searchedProducts.map((item) => (
-        <ItemStyle>
+        <ItemStyle key={item.id}>
           <img src={item.img} width="180px" height="180px" />
           <ItemInfo>
             <ItemInfoTitle>{`${item.titleItem} ${item.model}`}</ItemInfoTitle>

@@ -21,6 +21,10 @@ const Header = () => {
   let history = useHistory();
 
   function handleClick(word) {
+    if(!word.length) {
+      alert(t('nullInput'))
+      return;
+    }
     setInputState("");
     history.push(`/search?w=${word}`);
   }

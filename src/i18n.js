@@ -3,7 +3,6 @@ import translationEng from "./locales/en/translation.json";
 import translationUa from "./locales/ua/translation.json";
 
 i18n.init({
-  debug: true,
   lng: "en",
 
   keySeparator: false, // we do not use keys in form messages.welcome

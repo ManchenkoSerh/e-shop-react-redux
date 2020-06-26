@@ -4,8 +4,18 @@ import {
     FETCH_PRODUCTS_SUCCESS,
     GET_PRODUCTS_INFO,
     SUB_TO_SHOPPING_CART,
-    FETCH_PRODUCTS_ON_NAME, FETCH_VIDEO_INFO_SUCCESS, API_KEY, ADD_TO_COMMENTS, FETCH_COMMENTS_SUCCESS,
-    FETCH_PRODUCTS_ON_CATEGORY, SAVE_URL, DELETE_URL, FETCH_PRODUCTS_ERROR, FETCH_LOADING, FETCH_ERROR,
+    FETCH_PRODUCTS_ON_NAME,
+    FETCH_VIDEO_INFO_SUCCESS,
+    API_KEY,
+    ADD_TO_COMMENTS,
+    FETCH_COMMENTS_SUCCESS,
+    FETCH_PRODUCTS_ON_CATEGORY,
+    SAVE_URL,
+    DELETE_URL,
+    FETCH_PRODUCTS_ERROR,
+    FETCH_LOADING,
+    FETCH_ERROR,
+    TOGGLE_FAVORITE_SUCCESS, FILTER_FAVORITE_PRODUCT,
 } from "../types/types";
 
 export const fetchProductsSuccess = (data) => ({
@@ -107,7 +117,8 @@ export const fetchProductsOnName = (searchLine) => (dispatch) => {
     .then((res) => {
       dispatch(fetchProductsSuccess(res));
     })
-    .then(() => dispatch(fetchProductsOnNameSuccess(searchLine)));
+    .then(() => dispatch(fetchProductsOnNameSuccess(searchLine)))
+      .catch((res)=>dispatch(fetchError(res)));
 };
 
 /**
@@ -124,6 +135,7 @@ export const fetchProductsOnCategory = (searchLine) => (dispatch) => {
     .then((res) => res.json())
     .then((res) => {dispatch(fetchProductsSuccess(res))})
     .then(() => dispatch(fetchProductsOnCategorySuccess(searchLine)))
+      .catch((res)=>dispatch(fetchError(res)));
 }
 export const saveUrl=(url)=>({
     type:SAVE_URL,
@@ -133,3 +145,26 @@ export const deletedUrl=(url)=>({
     type:DELETE_URL,
     payload:url
 })
+export const toggleFavoriteSuccess=(id,productObj)=>({
+    type:TOGGLE_FAVORITE_SUCCESS,
+    payload:{
+        id,
+        productObj
+    }
+})
+export const toggleFavorite=(id,product)=>(dispatch)=>{
+    fetch(`http://localhost:3001/products/${id}`,{
+        method:"PUT",
+        headers:{
+            "Content-Type":"application/json;charset=utf-8"
+        },
+        body:JSON.stringify(product)
+    })
+        //.then((res) => res.json())
+        .then(()=>dispatch(toggleFavoriteSuccess(id,product)))
+}
+export const filterFavoriteProduct=(data)=>({
+    type:FILTER_FAVORITE_PRODUCT,
+    payload:data
+})
+

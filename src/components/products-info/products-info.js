@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
+  AddToFavorite,
   Button,
   GeneralInfoToProduct,
   Img,
@@ -18,6 +19,7 @@ import Characteristics from "../characteristics/characteristics";
 import { useTranslation } from "react-i18next";
 import Spinner from "../spinner/spinner";
 import ToUp from "../to-up/ToUp";
+import {Redirect} from "react-router-dom"
 
 const ProductsInfo = ({
   getProductInfo,
@@ -34,6 +36,7 @@ const ProductsInfo = ({
   deletedUrl,
   isLoading,
   isError,
+                        toggleFavorite
 }) => {
   function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -60,8 +63,10 @@ const ProductsInfo = ({
       {isLoading ? (
         <Spinner />
       ) : isError ? (
-        <p>Error</p>
-      ) : (
+          <Redirect to="/page-not-found"/>
+      ) :(query.get("id")=="")?(
+          <Redirect to="/page-not-found"/>
+          ) : (
         <ProductInfoContainer className="scroll">
           <ToUp />
           <div style={{ display: "flex" }}>
@@ -82,6 +87,14 @@ const ProductsInfo = ({
             <GeneralInfoToProduct>
               <h1>{productsInfo.titleItem + " " + productsInfo.model}</h1>
               <ProductPrice>{productsInfo.price}$</ProductPrice>
+              <AddToFavorite onClick={()=> {
+                toggleFavorite(productsInfo.id, {
+                  ...productsInfo,
+                  favorite: !productsInfo.favorite
+                })
+              }
+
+              }>♥</AddToFavorite>
               <Button onClick={() => onIncrease(productsInfo.id)}>
                 {t("Add to cart")}
               </Button>

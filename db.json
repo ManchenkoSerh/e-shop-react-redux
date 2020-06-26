@@ -39,6 +39,7 @@
         }
       ],
       "urlVideoId": "BAQ6tkiQheo",
+      "favorite": false,
       "titleCategory": "phone"
     },
     {
@@ -80,6 +81,7 @@
         }
       ],
       "urlVideoId": "f-8cVqANmbI",
+      "favorite": false,
       "titleCategory": "laptop"
     },
     {
@@ -121,6 +123,7 @@
         }
       ],
       "urlVideoId": "Xa7FQ72lp9w",
+      "favorite": false,
       "titleCategory": "phone"
     },
     {
@@ -162,6 +165,7 @@
         }
       ],
       "urlVideoId": "-xTo7xvkZFo",
+      "favorite": false,
       "titleCategory": "TV"
     },
     {
@@ -203,6 +207,7 @@
         }
       ],
       "urlVideoId": "7GgGMXurLnU",
+      "favorite": true,
       "titleCategory": "TV"
     },
     {
@@ -240,6 +245,7 @@
         }
       ],
       "urlVideoId": "f-8cVqANmbI",
+      "favorite": false,
       "titleCategory": "laptop"
     },
     {
@@ -277,6 +283,7 @@
         }
       ],
       "urlVideoId": "f-8cVqANmbI",
+      "favorite": false,
       "titleCategory": "laptop"
     }
   ],

@@ -41,6 +41,7 @@ const ProductsList = ({
                 <ProductsListItem
                   item={item}
                   onIncrease={() => onIncrease(id)}
+                  key={item.id}
                 />
               );
             })}

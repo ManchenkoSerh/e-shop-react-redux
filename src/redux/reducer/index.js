@@ -89,7 +89,8 @@ function data(state = initialState, action) {
         ...state,
         isLoading: false,
         searchedProducts: state.products.filter((item) =>
-          item.titleItem.toLowerCase().includes(action.payload.toLowerCase())
+          item.titleItem.toLowerCase().includes(action.payload.toLowerCase()) ||
+          item.model.toLowerCase().includes(action.payload.toLowerCase())
         ),
         urlSave: undefined
       };

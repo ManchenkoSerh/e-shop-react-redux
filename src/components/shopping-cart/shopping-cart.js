@@ -13,6 +13,7 @@ import {
     TextBox
 } from "../comments/comments-style";
 import ShoppingCartModal from "./shopping-cart-modal";
+import {fetchProducts} from "../../redux/action/actions";
 
 const ShoppingCartTable = ({
   shoppingCart = [],
@@ -20,7 +21,7 @@ const ShoppingCartTable = ({
   total,
   onIncrease,
   onDecrease,
-  onDeleted /*onDecrease,onDelete*/,
+  onDeleted /*onDecrease,onDelete*/,fetchProducts
 }) => {
   let sum = 0;
   function totalSum() {
@@ -30,10 +31,13 @@ const ShoppingCartTable = ({
     return <span>{sum}</span>;
   }
 
+  useEffect( () => {
+    fetchProducts()
+  },[])
   const { t } = useTranslation();
   return (
     <div className="shopping-cart-table">
-      <h2>{t('Shopping Cart')}</h2>
+      <h2 style={{padding: "15px 15px"}}>{t('Shopping Cart')}</h2>
       <ul>
         {shoppingCart.map((item) => {
           const { id, ...itemprop } = item;

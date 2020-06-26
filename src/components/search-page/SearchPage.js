@@ -12,6 +12,7 @@ import {
 } from "./SearchPageStyled";
 import { useTranslation } from "react-i18next";
 import Spinner from "../spinner/spinner";
+import {Redirect} from "react-router-dom";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -23,6 +24,7 @@ const SearchPage = ({
   fetchProductsOnCategory,
   onIncrease,
   isLoading,
+                      isError
 }) => {
   const { t } = useTranslation();
   let query = useQuery();
@@ -40,9 +42,12 @@ const SearchPage = ({
     return null;
   }
 
+
   return isLoading ? (
     <Spinner />
-  ) : searchedProducts.length > 0 ? (
+  ) : isError ?
+      (<Redirect to="/page-not-found"/>):
+      searchedProducts.length > 0 ? (
     <Results>
       {searchedProducts.map((item) => (
         <ItemStyle key={item.id}>

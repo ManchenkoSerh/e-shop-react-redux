@@ -6,7 +6,7 @@ import {
   fetchComments, fetchProducts,
   fetchVideoInfo,
   getProductInfo,
-  saveUrl,
+  saveUrl, toggleFavorite,
 } from "../../redux/action/actions";
 
 const mapStateToProps = (state) => ({
@@ -26,6 +26,7 @@ const mapDispatchToProps = (dispatch) => ({
   fetchComments: (id) => dispatch(fetchComments(id)),
   saveUrl: (url) => dispatch(saveUrl(url)),
   deletedUrl: () => dispatch(deletedUrl()),
+  toggleFavorite:(id,product)=>dispatch(toggleFavorite(id,product))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductsInfo);

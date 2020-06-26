@@ -74,7 +74,7 @@ const Header = () => {
           onKeyPress={inputOnKeyPressHandler}
           value={inputState}
         />
-        <Favorite>♥</Favorite>
+        <Link to="/favorites"><Favorite>♥</Favorite></Link>
         <Link to="/shopping-cart">
           <Cart>{t("Cart")}</Cart>
         </Link>

@@ -5,6 +5,7 @@ import Slider from "../Slider/slider";
 import { Wrapper } from "../footer/footer-style";
 import Spinner from "../spinner/spinner";
 import ToUp from "../to-up/ToUp";
+import {Redirect} from "react-router-dom";
 
 const ProductsList = ({
   products = [],
@@ -27,7 +28,7 @@ const ProductsList = ({
       {isLoading ? (
         <Spinner />
       ) : isError ? (
-        <p>Error</p>
+          <Redirect to="/page-not-found"/>
       ) : (
         <div>
           <Wrapper>

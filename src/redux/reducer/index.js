@@ -13,13 +13,14 @@ import {
   DELETE_URL,
   FETCH_PRODUCTS_ERROR,
   FETCH_ERROR,
-  FETCH_LOADING,
+  FETCH_LOADING, TOGGLE_FAVORITE_SUCCESS, FILTER_FAVORITE_PRODUCT,
 } from "../types/types";
 
 const initialState = {
   shoppingCart: [],
   products: [],
   productsInfo: [],
+  favorite:[],
   videoUrl: [],
   comments: [],
   urlSave: [],
@@ -38,6 +39,7 @@ function data(state = initialState, action) {
     case FETCH_ERROR:
       return {
         ...state,
+        isLoading: false,
         isError: true,
       };
     case FETCH_LOADING:
@@ -223,6 +225,26 @@ function data(state = initialState, action) {
         };
       }
     }
+    case FILTER_FAVORITE_PRODUCT:
+      return {
+        ...state,
+        favorite:state.products.filter(
+            (item) =>
+                item.favorite == true
+        ),
+
+
+      }
+    case TOGGLE_FAVORITE_SUCCESS:
+      debugger;
+      return{
+        ...state,
+       // productsInfo:state.productsInfo.id===action.payload.id?action.payload.productObj:state.productsInfo
+        products:state.products.map(item=>
+              item.id===action.payload.id?action.payload.productObj:item
+          )
+
+      }
 
     default:
       return state;

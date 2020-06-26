@@ -36,6 +36,13 @@ export const Button = styled.button`
   cursor:pointer;
   }
 `;
+export const AddToFavorite=styled.button`
+  color: yellow;
+  padding: 0 10px;
+  font-size: 1.5em;
+  border:none;
+  outline: none;
+  cursor: pointer;`
 export const ProductPrice = styled.span`
   padding-top: 20px;
   margin-top: 20px;

@@ -1,5 +1,10 @@
 import {connect} from "react-redux"
-import {addToShoppingCart, fetchProducts, filterFavoriteProduct} from "../../redux/action/actions";
+import {
+    addToShoppingCart,
+    fetchFavoriteProduct,
+    fetchProducts,
+    filterFavoriteProduct
+} from "../../redux/action/actions";
 import FavoriteProducts from "../../components/favorite-products/favorite-products"
 const mapStateToProps=(state)=>({
 products:state.products,
@@ -12,5 +17,6 @@ const mapDispatchToProps=(dispatch)=>({
     onIncrease: (id) => {
         dispatch(addToShoppingCart(id));
     },
+    fetchFavoriteProduct:(data)=>dispatch(fetchFavoriteProduct(data))
 })
 export default connect(mapStateToProps,mapDispatchToProps)(FavoriteProducts)

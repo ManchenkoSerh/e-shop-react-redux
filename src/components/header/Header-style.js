@@ -76,7 +76,7 @@ const Categories = styled.p`
 const Favorite = styled.button`
   background-color: #11ffee00;
   color: white;
-  padding: 0 10px;
+  padding: 20px 10px;
   font-size: 1.5em;
   border: none;
   outline: none;

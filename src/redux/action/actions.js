@@ -168,3 +168,14 @@ export const filterFavoriteProduct=(data)=>({
     payload:data
 })
 
+export const fetchFavoriteProduct = (data) => (dispatch) => {
+  dispatch(fetchLoading());
+  fetch("http://localhost:3001/products")
+    .then((res) => res.json())
+    .then((res) => {
+      dispatch(fetchProductsSuccess(res));
+    })
+    .then(() => dispatch(filterFavoriteProduct(data)))
+    .catch((res)=>dispatch(fetchError(res)));
+}
+

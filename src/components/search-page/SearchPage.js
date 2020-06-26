@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useHistory, useLocation, Redirect } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   AnyOneResults,
   Button,
@@ -10,13 +11,7 @@ import {
   ItemStyle,
   Results,
 } from "./SearchPageStyled";
-import { useTranslation } from "react-i18next";
 import Spinner from "../spinner/spinner";
-import {Redirect} from "react-router-dom";
-
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
 
 const SearchPage = ({
   fetchProductsOnName,
@@ -24,13 +19,22 @@ const SearchPage = ({
   fetchProductsOnCategory,
   onIncrease,
   isLoading,
-                      isError
+  isError,
 }) => {
-  const { t } = useTranslation();
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
   let query = useQuery();
-  let assignment = query.get("w");
+
+  const { t } = useTranslation();
+
+  let history = useHistory();
 
   useEffect(() => {
+    if (!query.get("c") && !query.get("w")) {
+      history.push(`/`);
+    }
     if (query.get("w")) {
       fetchProductsOnName(query.get("w"));
     } else if (query.get("c")) {
@@ -38,16 +42,11 @@ const SearchPage = ({
     }
   }, [query.get("w") || query.get("c")]);
 
-  if (searchedProducts === undefined) {
-    return null;
-  }
-
-
   return isLoading ? (
     <Spinner />
-  ) : isError ?
-      (<Redirect to="/page-not-found"/>):
-      searchedProducts.length > 0 ? (
+  ) : isError ? (
+    <Redirect to="/page-not-found" />
+  ) : searchedProducts?.length > 0 ? (
     <Results>
       {searchedProducts.map((item) => (
         <ItemStyle key={item.id}>
@@ -65,11 +64,7 @@ const SearchPage = ({
     </Results>
   ) : (
     <AnyOneResults>
-      {t("On request") +
-        ' "' +
-        query.get("w") +
-        '" ' +
-        t("found 0 products")}
+      {t("On request") + ' "' + query.get("w") + '" ' + t("found 0 products")}
     </AnyOneResults>
   );
 };
